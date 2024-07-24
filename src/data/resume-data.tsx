@@ -6,11 +6,11 @@ export const RESUME_DATA = {
   location: "Cordoba, Argentina",
   locationLink: "https://www.google.com/maps/place/C%C3%B3rdoba",
   about: "Estudiante de Licenciatura en Ciencias de la Computación.",
-  summary: ".",
+  summary:
+    "Disfruto del desarrollo de software y estoy siempre aprendiendo nuevas tecnologías y metodologías. Valoro el código limpio, eficiente y escalable.Busco proyectos que representen un desafío.",
   avatarUrl: "",
   contact: {
     email: "ramirolugov@gmail.com",
-    tel: "+54 3541 378400",
     social: [
       {
         name: "GitHub",
@@ -27,7 +27,7 @@ export const RESUME_DATA = {
   education: [
     {
       school: "Universidad Nacional de Cordoba (FaMAF)",
-      degree: "Licenciatura en Ciencias de la Computación",
+      degree: "Licenciatura en Ciencias de la Computación.",
       start: "2022",
       end: "ACTUALIDAD",
     },
