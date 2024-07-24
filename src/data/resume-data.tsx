@@ -7,7 +7,7 @@ export const RESUME_DATA = {
   locationLink: "https://www.google.com/maps/place/C%C3%B3rdoba",
   about: "Estudiante de Licenciatura en Ciencias de la Computación.",
   summary:
-    "Disfruto del desarrollo de software y estoy siempre aprendiendo nuevas tecnologías y metodologías. Valoro el código limpio, eficiente y escalable.Busco proyectos que representen un desafío.",
+    "Disfruto del desarrollo de software y estoy siempre aprendiendo nuevas tecnologías y metodologías. Valoro el código limpio, eficiente y escalable. Busco proyectos que representen un desafío.",
   avatarUrl: "",
   contact: {
     email: "ramirolugov@gmail.com",
@@ -48,6 +48,7 @@ export const RESUME_DATA = {
   skills: [
     "C / C++",
     "Rust",
+    "Python",
     "JavaScript",
     "TypeScript",
     "React/Next.js",
@@ -55,6 +56,7 @@ export const RESUME_DATA = {
     "Git",
     "Html",
     "CSS",
+    "Bash",
   ],
   projects: [
     {
