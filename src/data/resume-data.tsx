@@ -7,7 +7,7 @@ export const RESUME_DATA = {
   locationLink: "https://www.google.com/maps/place/C%C3%B3rdoba",
   about: "Estudiante de Licenciatura en Ciencias de la Computación.",
   summary:
-    "Disfruto del desarrollo de software y estoy siempre aprendiendo nuevas tecnologías y metodologías. Valoro el código limpio, eficiente y escalable. Busco proyectos que representen un desafío.",
+    "Disfruto del desarrollo de software, estoy siempre aprendiendo nuevas tecnologías y metodologías. Valoro el código limpio, eficiente y escalable.",
   avatarUrl: "",
   contact: {
     email: "ramirolugov@gmail.com",
@@ -66,7 +66,7 @@ export const RESUME_DATA = {
 
       link: {
         label: "eldato.com.ar",
-        href: "https://eldato.com.ar/",
+        href: "https://eldato.ar/",
       },
     },
     {
