@@ -1,45 +1,48 @@
-# Minimalist CV
+# Mi CV
 
-Simple web app that renders minimalist CV with print-friendly layout.
+Aplicación web simple que renderiza un CV minimalista con un diseño amigable para imprimir.
 
-Built with Next.js and shadcn/ui, deployed on Vercel.
+Construida con Next.js y shadcn/ui inspirado en [cv](https://github.com/BartoszJarocki/cv).
 
-# Features
+## Características
 
-- Setup only takes a few minutes [single config file](./src/data/resume-data.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/ui, TailwindCss
-- Auto generated Layout
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+- La configuración solo toma unos minutos [archivo de configuración único](./src/data/resume-data.tsx)
+- Construido usando Next.js 14, React, Typescript, Shadcn/ui, TailwindCss
+- Layout generado automáticamente
+- Responsivo para diferentes dispositivos
+- Optimizado para Next.js y Vercel
 
-# Getting Started Locally
+## Instalación
 
-1. Clone this repository to your local machine:
-
+1. Clona el repositorio:
    ```bash
-   git clone https://github.com/BartoszJarocki/cv.git
+   git clone https://github.com/ramiro-l/cv
    ```
-
-2. Move to the cloned directory
-
+2. Navega al directorio del proyecto:
    ```bash
    cd cv
    ```
-
-3. Install dependencies:
-
+3. Instala las dependencias:
    ```bash
-   yarn install
+   npm install
    ```
 
-4. Start the local Server:
+## Uso
 
+1. Inicia el servidor de desarrollo:
    ```bash
-   yarn dev
+   npm run dev
    ```
+2. Abre tu navegador y navega a `http://localhost:3000` para ver tu CV en línea.
 
-5. Open the [Config file](./src/data/resume-data.tsx) and make changes
+## Personalización
 
-# License
+Para personalizar tu CV, edita el archivo de configuración ubicado en `./src/data/resume-data.tsx`.
 
-[MIT](https://choosealicense.com/licenses/mit/)
+## Contribuciones
+
+Si encuentras algún problema o tienes sugerencias, por favor abre un issue o envía un pull request.
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT. Ver el archivo [LICENSE](./LICENSE) para más detalles.
