@@ -1,4 +1,5 @@
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
+import { title } from "process";
 
 export const RESUME_DATA = {
   name: "Ramiro Lugo Viola",
@@ -70,7 +71,7 @@ export const RESUME_DATA = {
       },
     },
     {
-      title: "Truqito App",
+      title: "Truquito App",
       techStack: ["Side Project", "TypeScript", "Next.js", "TaiwindCSS"],
       description: "Contador de puntos del juego de cartas 'Truco'.",
 
@@ -105,6 +106,19 @@ export const RESUME_DATA = {
         label: "examenes-viejos.pages.dev",
         href: "https://examenes-viejos.pages.dev/",
       },
+    },
+    {
+      title: "El Switcher",
+      techStack: [
+        "University Project",
+        "TypeScript",
+        "Vite",
+        "TaiwindCSS",
+        "ShadcnUI",
+        "Websockets",
+      ],
+      description:
+        "El Switcher es un juego en tiempo real inspirado en un juego de mesa.",
     },
   ],
 } as const;
