@@ -133,7 +133,7 @@ export const RESUME_DATA = {
         "TypeScript",
       ],
       description:
-        "Descarga archivos/carpetas facilmente seleccionandolos de un repositorio de GitHub. Surge porque esta funcionalidad no esta en GitHub.",
+        "Descarga archivos/carpetas seleccionandolos de un repositorio de GitHub.",
       link: {
         label: "repo-downloader.pages.dev",
         href: "https://repo-downloader.pages.dev/",
