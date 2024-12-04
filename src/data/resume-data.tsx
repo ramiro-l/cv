@@ -1,5 +1,4 @@
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
-import { title } from "process";
 
 export const RESUME_DATA = {
   name: "Ramiro Lugo Viola",
@@ -101,7 +100,6 @@ export const RESUME_DATA = {
         "ShadcnUI",
       ],
       description: "Visualizador de examenes viejos de la facultad FaMAF.",
-
       link: {
         label: "examenes-viejos.pages.dev",
         href: "https://examenes-viejos.pages.dev/",
@@ -119,6 +117,27 @@ export const RESUME_DATA = {
       ],
       description:
         "El Switcher es un juego en tiempo real inspirado en un juego de mesa.",
+      link: {
+        label: "GitHub",
+        href: "https://github.com/orgs/DeMarc-Team/repositories",
+      },
+    },
+    {
+      title: "Repo-Downloader",
+      techStack: [
+        "Side Project",
+        "API",
+        "Next.js",
+        "TaiwindCSS",
+        "ShadcnUI",
+        "TypeScript",
+      ],
+      description:
+        "Descarga archivos/carpetas facilmente seleccionandolos de un repositorio de GitHub. Surge porque esta funcionalidad no esta en GitHub.",
+      link: {
+        label: "repo-downloader.pages.dev",
+        href: "https://repo-downloader.pages.dev/",
+      },
     },
   ],
 } as const;
