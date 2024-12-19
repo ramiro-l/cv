@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { CommandMenu } from "@/components/command-menu";
 import { Metadata } from "next";
 import { Section } from "@/components/ui/section";
-import { GlobeIcon, MailIcon, PhoneIcon } from "lucide-react";
+import { GlobeIcon, MailIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
@@ -152,8 +152,8 @@ export default function Page() {
         </Section>
 
         <Section className="print-force-new-page scroll-mb-16">
-          <h2 className="text-xl font-bold">Projectos</h2>
-          <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2">
+          <h2 className="text-xl font-bold">Proyectos</h2>
+          <div className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2  print:grid-cols-2 print:gap-2">
             {RESUME_DATA.projects
               .slice()
               .reverse()
@@ -165,6 +165,7 @@ export default function Page() {
                     description={project.description}
                     tags={project.techStack}
                     link={"link" in project ? project.link.href : undefined}
+                    img={"img" in project ? project.img : undefined}
                   />
                 );
               })}

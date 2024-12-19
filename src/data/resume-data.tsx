@@ -62,22 +62,22 @@ export const RESUME_DATA = {
     {
       title: "El Dato",
       techStack: ["Side Project", "TypeScript", "Next.js", "TaiwindCSS"],
-      description: "Cotizacione del dólar en tiempo real.",
-
+      description: "Cotizaciones del dólar en tiempo real.",
       link: {
         label: "eldato.com.ar",
         href: "https://eldato.ar/",
       },
+      img: "https://i.ibb.co/crvFQp3/El-Dato.png",
     },
     {
       title: "Truquito App",
       techStack: ["Side Project", "TypeScript", "Next.js", "TaiwindCSS"],
       description: "Contador de puntos del juego de cartas 'Truco'.",
-
       link: {
         label: "truquito-app.pages.dev",
         href: "https://truquito-app.pages.dev/",
       },
+      img: "https://i.ibb.co/mCGrz6R/Truquito.png",
     },
     {
       title: "Conway's Game of Life",
@@ -89,6 +89,7 @@ export const RESUME_DATA = {
         label: "GitHub",
         href: "https://github.com/ramiro-l/Game-Of-Life-Conway-Rust",
       },
+      img: "https://i.ibb.co/Zz10Dwz/game-of-life.gif",
     },
     {
       title: "Web - Examenes Viejos",
@@ -99,11 +100,12 @@ export const RESUME_DATA = {
         "TaiwindCSS",
         "ShadcnUI",
       ],
-      description: "Visualizador de examenes viejos de la facultad FaMAF.",
+      description: "Visualizador de exámenes viejos de la facultad FaMAF.",
       link: {
         label: "examenes-viejos.pages.dev",
         href: "https://examenes-viejos.pages.dev/",
       },
+      img: "https://i.ibb.co/kKv1B9z/Banner-Examenes-Viejos.png",
     },
     {
       title: "El Switcher",
@@ -121,6 +123,7 @@ export const RESUME_DATA = {
         label: "GitHub",
         href: "https://github.com/orgs/DeMarc-Team/repositories",
       },
+      img: "https://i.ibb.co/Q9WPG0m/El-Switcher-Imagen.png",
     },
     {
       title: "Repo-Downloader",
@@ -133,11 +136,12 @@ export const RESUME_DATA = {
         "TypeScript",
       ],
       description:
-        "Descarga archivos/carpetas seleccionandolos de un repositorio de GitHub.",
+        "Descarga archivos/carpetas seleccionándolos de un repositorio de GitHub.",
       link: {
         label: "repo-downloader.pages.dev",
         href: "https://repo-downloader.pages.dev/",
       },
+      img: "https://raw.githubusercontent.com/ramiro-l/repo-downloader/refs/heads/main/app/og.png",
     },
   ],
 } as const;
