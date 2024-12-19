@@ -130,7 +130,7 @@ export default function Page() {
               <Card key={education.school}>
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="font-semibold leading-none">
+                    <h3 className="text-balance font-semibold  leading-tight">
                       {education.school}
                     </h3>
                     <div className="min-w text-nowrap text-sm tabular-nums text-gray-500">
