@@ -126,7 +126,7 @@ export const RESUME_DATA = {
       img: "https://i.ibb.co/Q9WPG0m/El-Switcher-Imagen.png",
     },
     {
-      title: "Repo-Downloader",
+      title: "Repo Downloader",
       techStack: [
         "Side Project",
         "API",
