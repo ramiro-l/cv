@@ -26,13 +26,14 @@ export function ProjectCard({
   return (
     <Card className="flex flex-col overflow-hidden border border-muted">
       <CardHeader className="">
-        <div className="object-cover">
+        <a href={link} target="_blank" className="overflow-hidden">
           <img
             src={img}
             alt={title}
             className="h-32 w-full object-cover  transition-transform duration-500 ease-in-out hover:scale-105"
           />
-        </div>
+        </a>
+
         <div className="space-y-1 px-3 pt-2">
           <CardTitle className="text-base">
             {link ? (
