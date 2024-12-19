@@ -30,6 +30,7 @@ export function ProjectCard({
           <img
             src={img}
             alt={title}
+            loading="lazy"
             className="h-32 w-full object-cover  transition-transform duration-500 ease-in-out hover:scale-105"
           />
         </a>
