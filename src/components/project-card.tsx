@@ -5,28 +5,22 @@ import {
   CardContent,
   CardDescription,
   CardTitle,
-} from "./ui/card";
-import BadgeTool from "./badge-tool";
-
-interface Props {
-  title: string;
-  description: string;
-  tags: readonly string[];
-  link?: string;
-  img?: string;
-}
+} from "@/components/ui/card";
+import BadgeTool from "@/components/badge-tool";
+import { type ProjectDetail } from "@/data/resume-data";
 
 export function ProjectCard({
   title,
   description,
-  tags,
+  techStack,
   link,
   img,
-}: Readonly<Props>) {
+  type,
+}: Readonly<ProjectDetail>) {
   return (
     <Card className="flex flex-col overflow-hidden border border-muted">
       <CardHeader className="">
-        <a href={link} target="_blank" className="overflow-hidden">
+        <a href={link?.href} target="_blank" className="overflow-hidden">
           <img
             src={img}
             alt={title}
@@ -39,7 +33,7 @@ export function ProjectCard({
           <CardTitle className="text-base">
             {link ? (
               <a
-                href={link}
+                href={link?.href}
                 target="_blank"
                 className="inline-flex items-center gap-1.5 hover:underline"
               >
@@ -50,17 +44,27 @@ export function ProjectCard({
               title
             )}
           </CardTitle>
-          <div className="hidden font-mono text-xs underline print:visible">
-            {link?.replace("https://", "").replace("www.", "").replace("/", "")}
-          </div>
+
+          {link && (
+            <div className="hidden font-mono text-xs underline print:visible">
+              {link.href
+                .replace("https://", "")
+                .replace("www.", "")
+                .replace("/", "")}
+            </div>
+          )}
+
           <CardDescription className="font-mono text-xs">
             {description}
           </CardDescription>
         </div>
       </CardHeader>
-      <CardContent className="mt-auto flex px-3 pb-3">
-        <div className="mt-2 flex flex-wrap gap-1">
-          {tags.map((tag) => (
+      <CardContent className="mt-2 flex h-full flex-col justify-center gap-1 px-3 pb-3">
+        <div>
+          <BadgeTool tag={type} size="small" />
+        </div>
+        <div className=" flex w-full flex-wrap justify-between gap-1                                                                                                                            ">
+          {techStack.map((tag) => (
             <BadgeTool key={tag} tag={tag} size="small" />
           ))}
         </div>

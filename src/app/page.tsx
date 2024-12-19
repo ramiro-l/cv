@@ -1,6 +1,6 @@
+import { Metadata } from "next";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
-import { Metadata } from "next";
 import { Section } from "@/components/ui/section";
 import { GlobeIcon, MailIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -34,16 +34,16 @@ export default function Page() {
                 <strong className="mt-0.5">{RESUME_DATA.location}</strong>
               </a>
             </p>
-            <div className="flex gap-x-1 pt-1 font-mono text-sm text-muted-foreground print:hidden">
+            <div className="flex gap-x-1 pt-1 font-mono text-sm opacity-75  print:hidden">
               {RESUME_DATA.contact.email ? (
                 <Button
-                  className="h-8 w-8"
+                  className="size-7"
                   variant="outline"
                   size="icon"
                   asChild
                 >
                   <a href={`mailto:${RESUME_DATA.contact.email}`}>
-                    <MailIcon className="h-4 w-4" />
+                    <MailIcon className="size-4" />
                   </a>
                 </Button>
               ) : null}
@@ -51,13 +51,13 @@ export default function Page() {
               {RESUME_DATA.contact.social.map((social) => (
                 <Button
                   key={social.name}
-                  className="h-8 w-8"
+                  className="size-7"
                   variant="outline"
                   size="icon"
                   asChild
                 >
                   <a href={social.url}>
-                    <social.icon className="h-4 w-4" />
+                    <social.icon className="size-4" />
                   </a>
                 </Button>
               ))}
@@ -158,16 +158,7 @@ export default function Page() {
               .slice()
               .reverse()
               .map((project) => {
-                return (
-                  <ProjectCard
-                    key={project.title}
-                    title={project.title}
-                    description={project.description}
-                    tags={project.techStack}
-                    link={"link" in project ? project.link.href : undefined}
-                    img={"img" in project ? project.img : undefined}
-                  />
-                );
+                return <ProjectCard key={project.title} {...project} />;
               })}
           </div>
         </Section>

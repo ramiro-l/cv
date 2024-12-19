@@ -1,6 +1,58 @@
 import { GitHubIcon, LinkedInIcon } from "@/components/icons";
 
-export const RESUME_DATA = {
+export interface WorkDetail {
+  company: string;
+  link: string;
+  badges: string[];
+  title: string;
+  logo: string;
+  start: string;
+  end: string;
+  description: string;
+}
+
+export interface EducationDetail {
+  school: string;
+  degree: string;
+  start: string;
+  end: string;
+}
+
+export interface ProjectDetail {
+  title: string;
+  techStack: string[];
+  type: "Side Project" | "University Project";
+  description: string;
+  img: string;
+  link?: {
+    label: string;
+    href: string;
+  };
+}
+
+interface ResumeData {
+  name: string;
+  initials: string;
+  location: string;
+  locationLink: string;
+  about: string;
+  summary: string;
+  avatarUrl: string;
+  contact: {
+    email: string;
+    social: {
+      name: string;
+      url: string;
+      icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+    }[];
+  };
+  education: EducationDetail[];
+  work: WorkDetail[];
+  skills: string[];
+  projects: ProjectDetail[];
+}
+
+export const RESUME_DATA: ResumeData = {
   name: "Ramiro Lugo Viola",
   initials: "RL",
   location: "Cordoba, Argentina",
@@ -62,10 +114,10 @@ export const RESUME_DATA = {
   projects: [
     {
       title: "Conway's Game of Life",
-      techStack: ["Side Project", "Rust"],
+      type: "Side Project",
+      techStack: ["Rust", "CLI"],
       description:
         "Implementación del juego de la vida de Conway en Rust para la consola.",
-
       link: {
         label: "GitHub",
         href: "https://github.com/ramiro-l/Game-Of-Life-Conway-Rust",
@@ -74,7 +126,8 @@ export const RESUME_DATA = {
     },
     {
       title: "Truquito App",
-      techStack: ["Side Project", "TypeScript", "Next.js", "TailwindCSS"],
+      type: "Side Project",
+      techStack: ["TypeScript", "Next.js", "TailwindCSS"],
       description: "Contador de puntos del juego de cartas 'Truco'.",
       link: {
         label: "truquito-app.pages.dev",
@@ -85,8 +138,10 @@ export const RESUME_DATA = {
 
     {
       title: "El Dato",
-      techStack: ["Side Project", "TypeScript", "Next.js", "TailwindCSS"],
-      description: "Cotizaciones del dólar en tiempo real.",
+      type: "Side Project",
+      techStack: ["TypeScript", "Next.js", "TailwindCSS"],
+      description:
+        "Cotizaciones del dólar en tiempo real. Con calculadora, gráficos, crypto dólar y más.",
       link: {
         label: "eldato.com.ar",
         href: "https://eldato.ar/",
@@ -95,13 +150,8 @@ export const RESUME_DATA = {
     },
     {
       title: "Web - Examenes Viejos",
-      techStack: [
-        "Side Project",
-        "TypeScript",
-        "Astro",
-        "TailwindCSS",
-        "ShadcnUI",
-      ],
+      type: "Side Project",
+      techStack: ["TypeScript", "Astro", "TailwindCSS", "ShadcnUI"],
       description: "Visualizador de exámenes viejos de la facultad FaMAF.",
       link: {
         label: "examenes-viejos.pages.dev",
@@ -111,8 +161,8 @@ export const RESUME_DATA = {
     },
     {
       title: "El Switcher",
+      type: "University Project",
       techStack: [
-        "University Project",
         "TypeScript",
         "Vite",
         "TailwindCSS",
@@ -131,14 +181,8 @@ export const RESUME_DATA = {
     },
     {
       title: "Repo Downloader",
-      techStack: [
-        "Side Project",
-        "API",
-        "Next.js",
-        "TailwindCSS",
-        "ShadcnUI",
-        "TypeScript",
-      ],
+      type: "Side Project",
+      techStack: ["API", "Next.js", "TailwindCSS", "ShadcnUI", "TypeScript"],
       description:
         "Descarga archivos/carpetas seleccionándolos de un repositorio de GitHub.",
       link: {

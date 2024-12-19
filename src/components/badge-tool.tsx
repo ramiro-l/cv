@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { Badge } from "./ui/badge"; // Asegúrate de que la ruta sea correcta
+import { Badge } from "@/components/ui/badge"; // Asegúrate de que la ruta sea correcta
 
 const SIMPLE_ICONS_URL = "https://cdn.simpleicons.org";
 const COLOR = "black";
@@ -27,11 +27,14 @@ const BadgeTool = async ({ tag, size = "normal" }: BadgeToolProps) => {
 
   const iconSvg = await fetchIconSvg(iconUrl);
 
-  const sizeClass = size === "small" ? "text-[10px] px-1 py-0" : "px-3";
+  const sizeClass =
+    size === "small"
+      ? "text-[10px] px-1 py-0 min-w-[80px]"
+      : "px-3 min-w-[100px]";
 
   return (
     <Badge
-      className={`flex cursor-default items-center justify-center gap-1  ${sizeClass}`}
+      className={`flex flex-grow cursor-default items-center justify-center gap-1  ${sizeClass}`}
       variant="secondary"
       key={tag}
     >
