@@ -46,12 +46,13 @@ export const RESUME_DATA = {
     // },
   ],
   skills: [
-    "C / C++",
+    "C",
     "Rust",
     "Python",
     "JavaScript",
     "TypeScript",
-    "React/Next.js",
+    "React",
+    "Next.js",
     "Node.js",
     "Git",
     "Html",
@@ -59,26 +60,6 @@ export const RESUME_DATA = {
     "Bash",
   ],
   projects: [
-    {
-      title: "El Dato",
-      techStack: ["Side Project", "TypeScript", "Next.js", "TaiwindCSS"],
-      description: "Cotizaciones del dólar en tiempo real.",
-      link: {
-        label: "eldato.com.ar",
-        href: "https://eldato.ar/",
-      },
-      img: "https://i.ibb.co/crvFQp3/El-Dato.png",
-    },
-    {
-      title: "Truquito App",
-      techStack: ["Side Project", "TypeScript", "Next.js", "TaiwindCSS"],
-      description: "Contador de puntos del juego de cartas 'Truco'.",
-      link: {
-        label: "truquito-app.pages.dev",
-        href: "https://truquito-app.pages.dev/",
-      },
-      img: "https://i.ibb.co/mCGrz6R/Truquito.png",
-    },
     {
       title: "Conway's Game of Life",
       techStack: ["Side Project", "Rust"],
@@ -92,12 +73,33 @@ export const RESUME_DATA = {
       img: "https://i.ibb.co/Zz10Dwz/game-of-life.gif",
     },
     {
+      title: "Truquito App",
+      techStack: ["Side Project", "TypeScript", "Next.js", "TailwindCSS"],
+      description: "Contador de puntos del juego de cartas 'Truco'.",
+      link: {
+        label: "truquito-app.pages.dev",
+        href: "https://truquito-app.pages.dev/",
+      },
+      img: "https://i.ibb.co/mCGrz6R/Truquito.png",
+    },
+
+    {
+      title: "El Dato",
+      techStack: ["Side Project", "TypeScript", "Next.js", "TailwindCSS"],
+      description: "Cotizaciones del dólar en tiempo real.",
+      link: {
+        label: "eldato.com.ar",
+        href: "https://eldato.ar/",
+      },
+      img: "https://i.ibb.co/crvFQp3/El-Dato.png",
+    },
+    {
       title: "Web - Examenes Viejos",
       techStack: [
         "Side Project",
         "TypeScript",
         "Astro",
-        "TaiwindCSS",
+        "TailwindCSS",
         "ShadcnUI",
       ],
       description: "Visualizador de exámenes viejos de la facultad FaMAF.",
@@ -113,9 +115,11 @@ export const RESUME_DATA = {
         "University Project",
         "TypeScript",
         "Vite",
-        "TaiwindCSS",
+        "TailwindCSS",
         "ShadcnUI",
         "Websockets",
+        "SQLite",
+        "FastAPI",
       ],
       description:
         "El Switcher es un juego en tiempo real inspirado en un juego de mesa.",
@@ -131,7 +135,7 @@ export const RESUME_DATA = {
         "Side Project",
         "API",
         "Next.js",
-        "TaiwindCSS",
+        "TailwindCSS",
         "ShadcnUI",
         "TypeScript",
       ],

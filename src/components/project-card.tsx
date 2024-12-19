@@ -6,7 +6,7 @@ import {
   CardDescription,
   CardTitle,
 } from "./ui/card";
-import { Badge } from "./ui/badge";
+import BadgeTool from "./badge-tool";
 
 interface Props {
   title: string;
@@ -61,13 +61,7 @@ export function ProjectCard({
       <CardContent className="mt-auto flex px-3 pb-3">
         <div className="mt-2 flex flex-wrap gap-1">
           {tags.map((tag) => (
-            <Badge
-              className="px-1 py-0 text-[10px]"
-              variant="secondary"
-              key={tag}
-            >
-              {tag}
-            </Badge>
+            <BadgeTool key={tag} tag={tag} size="small" />
           ))}
         </div>
       </CardContent>

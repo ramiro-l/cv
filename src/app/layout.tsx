@@ -17,9 +17,9 @@ const lato = Lato({
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="es" className={lato.className}>
       <body className="py-5">{children}</body>
