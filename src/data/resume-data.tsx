@@ -127,7 +127,7 @@ export const RESUME_DATA = {
         label: "GitHub",
         href: "https://github.com/orgs/DeMarc-Team/repositories",
       },
-      img: "https://i.ibb.co/Q9WPG0m/El-Switcher-Imagen.png",
+      img: "https://i.ibb.co/VBvCwPQ/El-Switcher.png",
     },
     {
       title: "Repo Downloader",
