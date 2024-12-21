@@ -34,7 +34,7 @@ const BadgeTool = async ({ tag, size = "normal" }: BadgeToolProps) => {
 
   return (
     <Badge
-      className={`flex flex-grow cursor-default items-center justify-center gap-1  ${sizeClass}`}
+      className={`flex flex-grow cursor-default items-center justify-center gap-1 dark:text-white/75 ${sizeClass}`}
       variant="secondary"
       key={tag}
     >
@@ -43,7 +43,7 @@ const BadgeTool = async ({ tag, size = "normal" }: BadgeToolProps) => {
           src={iconSvg}
           alt={tag + " icon"}
           loading="lazy"
-          className={size === "small" ? "size-2.5" : "size-3"}
+          className={`${size === "small" ? "size-2.5" : "size-3"} dark:opacity-75 dark:invert`}
         />
       )}
       {tag}

@@ -6,6 +6,7 @@ import { GlobeIcon, MailIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { RESUME_DATA } from "@/data/resume-data";
 import { ProjectCard } from "@/components/project-card";
+import ToggleTheme from "@/components/toggle-theme";
 
 import BadgeTool from "@/components/badge-tool";
 
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 
 export default function Page() {
   return (
-    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
+    <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:px-16 md:pt-16 print:p-12">
       <section className="mx-auto w-full max-w-2xl space-y-8  print:space-y-6">
         <div className="flex justify-between">
           <div className="flex-1 space-y-1.5">
@@ -126,13 +127,13 @@ export default function Page() {
           <h2 className="text-xl font-bold">Educación</h2>
           {RESUME_DATA.education.map((education) => {
             return (
-              <Card key={education.school}>
+              <Card key={education.school} className="bg-transparent">
                 <CardHeader>
                   <div className="flex items-center justify-between gap-x-2 text-base">
-                    <h3 className="text-balance font-semibold  leading-tight">
+                    <h3 className="text-balance font-semibold leading-tight">
                       {education.school}
                     </h3>
-                    <div className="min-w text-nowrap text-sm tabular-nums text-gray-500">
+                    <div className="min-w text-nowrap text-sm tabular-nums text-muted-foreground">
                       {education.start} - {education.end}
                     </div>
                   </div>
@@ -163,6 +164,14 @@ export default function Page() {
           </div>
         </Section>
       </section>
+      <footer className=" mx-auto mb-2   mt-8 flex w-full max-w-2xl items-center justify-between print:hidden">
+        <p className="ml-1 text-xs text-muted-foreground">
+          <strong>
+            © {new Date().getFullYear()} {RESUME_DATA.name}
+          </strong>
+        </p>
+        <ToggleTheme />
+      </footer>
     </main>
   );
 }

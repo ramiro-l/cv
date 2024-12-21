@@ -1,6 +1,6 @@
+import { ThemeProvider } from "next-themes";
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
-
 import "./globals.css";
 import React from "react";
 
@@ -21,8 +21,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={lato.className}>
-      <body className="py-5">{children}</body>
+    <html lang="es" className={lato.className} suppressHydrationWarning>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          themes={["light", "dark"]}
+          enableSystem
+        >
+          {children}
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
