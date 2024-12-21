@@ -21,7 +21,9 @@ export default function Page() {
       <section className="mx-auto w-full max-w-2xl space-y-8  print:space-y-6">
         <div className="flex justify-between">
           <div className="flex-1 space-y-1.5">
-            <h1 className=" text-2xl font-bold ">{RESUME_DATA.name}</h1>
+            <h1 className=" text-2xl font-bold" translate="no">
+              {RESUME_DATA.name}
+            </h1>
             <p className="max-w-lg text-balance font-mono text-sm text-muted-foreground">
               {RESUME_DATA.about}
             </p>
@@ -145,7 +147,7 @@ export default function Page() {
         </Section>
         <Section>
           <h2 className="text-xl font-bold">Habilidades</h2>
-          <div className="flex flex-wrap gap-1">
+          <div className="flex flex-wrap gap-1" translate="no">
             {RESUME_DATA.skills.map((skill) => {
               return <BadgeTool tag={skill} key={skill} />;
             })}
@@ -165,7 +167,7 @@ export default function Page() {
         </Section>
       </section>
       <footer className=" mx-auto mb-2   mt-8 flex w-full max-w-2xl items-center justify-between print:hidden">
-        <p className="ml-1 text-xs text-muted-foreground">
+        <p className="ml-1 text-xs text-muted-foreground" translate="no">
           <strong>
             © {new Date().getFullYear()} {RESUME_DATA.name}
           </strong>

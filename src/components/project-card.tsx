@@ -36,6 +36,7 @@ export function ProjectCard({
                 href={link?.href}
                 target="_blank"
                 className="inline-flex items-center gap-1.5 hover:underline"
+                translate="no"
               >
                 {title}{" "}
                 <span className="size-1 rounded-full bg-green-500"></span>
@@ -63,7 +64,10 @@ export function ProjectCard({
         <div>
           <BadgeTool tag={type} size="small" />
         </div>
-        <div className=" flex w-full flex-wrap justify-between gap-1                                                                                                                            ">
+        <div
+          className=" flex w-full flex-wrap justify-between gap-1"
+          translate="no"
+        >
           {techStack.map((tag) => (
             <BadgeTool key={tag} tag={tag} size="small" />
           ))}
