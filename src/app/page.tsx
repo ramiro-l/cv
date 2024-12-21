@@ -18,7 +18,7 @@ export default function Page() {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:p-16 print:p-12">
       <section className="mx-auto w-full max-w-2xl space-y-8  print:space-y-6">
-        <div className="flex items-center justify-between">
+        <div className="flex justify-between">
           <div className="flex-1 space-y-1.5">
             <h1 className=" text-2xl font-bold ">{RESUME_DATA.name}</h1>
             <p className="max-w-lg text-balance font-mono text-sm text-muted-foreground">
@@ -71,7 +71,7 @@ export default function Page() {
             </div>
           </div>
 
-          <Avatar className="h-28 w-28">
+          <Avatar className="ml-1 mt-1 size-28 max-[380px]:hidden">
             <AvatarImage alt={RESUME_DATA.name} src={RESUME_DATA.avatarUrl} />
             <AvatarFallback>{RESUME_DATA.initials}</AvatarFallback>
           </Avatar>
