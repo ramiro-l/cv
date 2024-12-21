@@ -30,7 +30,7 @@ const BadgeTool = async ({ tag, size = "normal" }: BadgeToolProps) => {
   const sizeClass =
     size === "small"
       ? "text-[10px] px-1 py-0 min-w-[80px]"
-      : "px-3 min-w-[100px]";
+      : "px-3 md:min-w-[100px]";
 
   return (
     <Badge
