@@ -7,7 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import BadgeTool from "@/components/badge-tool";
-import { type ProjectDetail } from "@/data/const-data";
+import { type ProjectDetail } from "@/data/projects";
 
 export function ProjectCard({
   title,
