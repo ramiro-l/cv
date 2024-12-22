@@ -1,4 +1,4 @@
-import { checkSupportedLanguage, type SupportedLanguage } from "@/i18n/const";
+import { checkSupportedLanguage, type SupportedLanguage } from "@/langs";
 
 const TITLES: { [key in string]: { [key in SupportedLanguage]: string } } = {
     about: {

@@ -1,8 +1,6 @@
+import { SUPPORTED_LANGUAGES, SupportedLanguage } from "@/langs";
 import { ThemeProvider } from "next-themes";
 import { Lato } from "next/font/google";
-import { NextIntlClientProvider } from "next-intl";
-import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
 import React from "react";
 import "../globals.css";
 
@@ -13,29 +11,25 @@ const lato = Lato({
 });
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+  return SUPPORTED_LANGUAGES.map((lang) => ({ lang }));
 }
 
 export default async function LocaleLayout({
   children,
-  params: { locale },
+  params: { lang },
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: { lang: SupportedLanguage };
 }>) {
-  if (!routing.locales.includes(locale as any)) {
-    notFound();
-  }
-
   return (
-    <html lang={locale} className={lato.className} suppressHydrationWarning>
+    <html lang={lang} className={lato.className} suppressHydrationWarning>
       <body>
         <ThemeProvider
           attribute="class"
           themes={["light", "dark"]}
           enableSystem
         >
-          <NextIntlClientProvider>{children}</NextIntlClientProvider>
+          {children}
         </ThemeProvider>
       </body>
     </html>

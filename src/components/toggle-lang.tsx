@@ -1,11 +1,8 @@
 "use client";
 
-import { useLocale } from "next-intl";
-import { SUPPORTED_LANGUAGES } from "@/i18n/const";
+import { SUPPORTED_LANGUAGES } from "@/langs";
 
-const ToggleLang = () => {
-  const lang = useLocale();
-
+const ToggleLang = ({ lang }: { lang: string }) => {
   return (
     <div className="flex w-fit items-center gap-2 rounded-full border border-muted p-0.5 text-xs text-muted-foreground">
       {SUPPORTED_LANGUAGES.map((language) => (

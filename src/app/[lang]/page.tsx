@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import { useLocale } from "next-intl";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
@@ -16,15 +15,16 @@ import aboutMe from "@/data/about-me";
 // import works from "@/data/work";
 
 import BadgeTool from "@/components/badge-tool";
+import { SupportedLanguage } from "@/langs";
 
 export const metadata: Metadata = {
   title: `${CONST_DATA.name} | CV`,
   description: CONST_DATA.metaDescription,
 };
 
-export default function Page() {
-  const locale = useLocale();
-
+export default function Page({
+  params: { lang },
+}: Readonly<{ params: { lang: SupportedLanguage } }>) {
   return (
     <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:px-16 md:pt-16 print:p-12">
       <section className="mx-auto w-full max-w-2xl space-y-8  print:space-y-6">
@@ -34,7 +34,7 @@ export default function Page() {
               {CONST_DATA.name}
             </h1>
             <p className="max-w-lg text-balance font-mono text-sm text-muted-foreground">
-              {aboutMe("profile", locale)}
+              {aboutMe("profile", lang)}
             </p>
             <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
               <a
@@ -90,15 +90,15 @@ export default function Page() {
         </div>
 
         <Section>
-          <h2 className="text-xl font-bold">{title("about", locale)}</h2>
+          <h2 className="text-xl font-bold">{title("about", lang)}</h2>
           <p className="font-mono text-sm text-muted-foreground">
-            {aboutMe("summary", locale)}
+            {aboutMe("summary", lang)}
           </p>
         </Section>
 
         {/* <Section>
-          <h2 className="text-xl font-bold">{title("work", locale)}</h2>
-          {works(locale).map((work) => {
+          <h2 className="text-xl font-bold">{title("work", lang)}</h2>
+          {works(lang).map((work) => {
             return (
               <Card key={work.company}>
                 <CardHeader>
@@ -138,8 +138,8 @@ export default function Page() {
         </Section> */}
 
         <Section>
-          <h2 className="text-xl font-bold">{title("education", locale)}</h2>
-          {education(locale).map(
+          <h2 className="text-xl font-bold">{title("education", lang)}</h2>
+          {education(lang).map(
             (education: {
               school: string;
               start: string;
@@ -166,7 +166,7 @@ export default function Page() {
         </Section>
 
         <Section>
-          <h2 className="text-xl font-bold">{title("skills", locale)}</h2>
+          <h2 className="text-xl font-bold">{title("skills", lang)}</h2>
           <div className="flex flex-wrap gap-1" translate="no">
             {CONST_DATA.skills.map((skill) => {
               return <BadgeTool tag={skill} key={skill} />;
@@ -175,9 +175,9 @@ export default function Page() {
         </Section>
 
         <Section className="print-force-new-page scroll-mb-16">
-          <h2 className="text-xl font-bold">{title("projects", locale)}</h2>
+          <h2 className="text-xl font-bold">{title("projects", lang)}</h2>
           <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-3 print:grid-cols-2 print:gap-2">
-            {projects(locale)
+            {projects(lang)
               .slice()
               .reverse()
               .map((project) => {
@@ -197,7 +197,7 @@ export default function Page() {
           </strong>
         </p>
         <div className="flex flex-wrap justify-center gap-3">
-          <ToggleLang />
+          <ToggleLang lang={lang} />
           <ToggleTheme />
         </div>
       </footer>

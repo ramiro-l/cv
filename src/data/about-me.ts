@@ -1,4 +1,4 @@
-import { checkSupportedLanguage, type SupportedLanguage } from "@/i18n/const";
+import { checkSupportedLanguage, type SupportedLanguage } from "@/langs";
 
 const ABOUT_ME: { [key in string]: { [key in SupportedLanguage]: string } } = {
     profile: {
