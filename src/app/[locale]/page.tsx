@@ -13,6 +13,7 @@ import education from "@/data/education";
 import projects from "@/data/projects";
 import title from "@/data/titles";
 import aboutMe from "@/data/about-me";
+// import works from "@/data/work";
 
 import BadgeTool from "@/components/badge-tool";
 
@@ -97,7 +98,7 @@ export default function Page() {
 
         {/* <Section>
           <h2 className="text-xl font-bold">{title("work", locale)}</h2>
-          {RESUME_DATA.work.map((work) => {
+          {works(locale).map((work) => {
             return (
               <Card key={work.company}>
                 <CardHeader>
@@ -128,7 +129,7 @@ export default function Page() {
                     {work.title}
                   </h4>
                 </CardHeader>
-                <CardContent className="mt-2 text-xs">
+                <CardContent className="mt-2 text-sm">
                   {work.description}
                 </CardContent>
               </Card>
