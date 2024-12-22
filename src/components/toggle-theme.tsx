@@ -17,7 +17,7 @@ const ToggleTheme = () => {
   }
 
   return (
-    <div className="flex w-fit items-center gap-2 rounded-full border border-muted p-0.5 text-muted-foreground">
+    <div className="flex w-fit items-center gap-1 rounded-md border border-muted p-0.5 text-muted-foreground">
       <ThemeButton
         themeName="light"
         currentTheme={theme}
@@ -53,7 +53,7 @@ const ThemeButton = ({
 }) => (
   <button
     onClick={() => setTheme(themeName)}
-    className={`flex items-center justify-center rounded-full p-1.5 ${currentTheme === themeName ? "bg-muted text-secondary-foreground" : ""}`}
+    className={`flex items-center justify-center rounded-md p-1.5 hover:bg-muted/40 hover:text-secondary-foreground ${currentTheme === themeName ? "!bg-muted text-secondary-foreground" : ""}`}
   >
     <Icon className="size-4" />
   </button>
