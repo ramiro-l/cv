@@ -1,6 +1,7 @@
 "use client";
 
 import { SUPPORTED_LANGUAGES } from "@/langs";
+import { useTransitionRouter } from "next-view-transitions";
 
 const ToggleLang = ({ lang }: { lang: string }) => {
   return (
@@ -18,18 +19,22 @@ const LangButton = ({
 }: {
   lang: string;
   currentLang: string;
-}) => (
-  <button
-    onClick={() => {
-      const url = window.location.href;
-      if (lang !== currentLang) {
-        window.location.href = url.replace(`/${currentLang}`, `/${lang}`);
-      }
-    }}
-    className={`min-w-7 rounded-md p-1.5 uppercase hover:bg-muted/40 hover:text-secondary-foreground ${currentLang === lang ? "!bg-muted text-secondary-foreground" : ""}`}
-  >
-    {lang}
-  </button>
-);
+}) => {
+  const router = useTransitionRouter();
+
+  return (
+    <button
+      onClick={() => {
+        const url = window.location.href.replace(window.location.origin, "");
+        if (lang !== currentLang) {
+          router.push(url.replace(`/${currentLang}`, `/${lang}`));
+        }
+      }}
+      className={`min-w-7 rounded-md p-1.5 uppercase hover:bg-muted/40 hover:text-secondary-foreground ${currentLang === lang ? "!bg-muted text-secondary-foreground" : ""}`}
+    >
+      {lang}
+    </button>
+  );
+};
 
 export default ToggleLang;

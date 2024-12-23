@@ -1,8 +1,9 @@
-import { ThemeProvider } from "next-themes";
-import { Lato } from "next/font/google";
 import React from "react";
-import "@/app/globals.css";
+import { Lato } from "next/font/google";
+import { ThemeProvider } from "next-themes";
 import { SupportedLanguage } from "@/langs";
+import { ViewTransitions } from "next-view-transitions";
+import "@/app/globals.css";
 
 const lato = Lato({
   weight: ["400", "700"],
@@ -18,16 +19,18 @@ export default async function LocaleLayout({
   params: { lang: SupportedLanguage };
 }>) {
   return (
-    <html lang={lang} className={lato.className} suppressHydrationWarning>
-      <body>
-        <ThemeProvider
-          attribute="class"
-          themes={["light", "dark"]}
-          enableSystem
-        >
-          {children}
-        </ThemeProvider>
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang={lang} className={lato.className} suppressHydrationWarning>
+        <body>
+          <ThemeProvider
+            attribute="class"
+            themes={["light", "dark"]}
+            enableSystem
+          >
+            {children}
+          </ThemeProvider>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }
