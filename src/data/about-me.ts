@@ -17,7 +17,7 @@ const getAboutMe = (key: string, lang: string): string => {
         throw new Error(`Unsupported language: ${lang}`);
     }
     if (!ABOUT_ME[key]) {
-        throw new Error(`No title found for key: ${key}`);
+        throw new Error(`No about me found for key: ${key}`);
     }
     return ABOUT_ME[key][lang];
 };

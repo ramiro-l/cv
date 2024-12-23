@@ -21,7 +21,7 @@ const getTheme = (key: string, lang: string): string => {
         throw new Error(`Unsupported language: ${lang}`);
     }
     if (!THEMES[key]) {
-        throw new Error(`No title found for key: ${key}`);
+        throw new Error(`No theme found for key: ${key}`);
     }
     return THEMES[key][lang];
 };
