@@ -1,5 +1,6 @@
 "use client";
 
+import { SUPPORTED_LANGUAGES } from "@/langs";
 import { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import { useTransitionRouter } from "next-view-transitions";
@@ -21,7 +22,10 @@ export default function NotFound() {
             Sorry, the page you are looking for does not exist.
           </p>
           <div className="w-fit">
-            <Button onClick={() => router.push("/")} variant="outline">
+            <Button
+              onClick={() => router.push("/" + SUPPORTED_LANGUAGES[0])}
+              variant="outline"
+            >
               Go to CV
             </Button>
           </div>
