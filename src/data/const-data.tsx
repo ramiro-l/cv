@@ -62,31 +62,3 @@ export const CONST_DATA: ConstData = {
     "Bash",
   ],
 } as const;
-
-/*
-    export interface WorkDetail {
-      company: string;
-      link: string;
-      badges: string[];
-      title: string;
-      logo: string;
-      start: string;
-      end: string;
-      description: string;
-    }
-
-      work: [
-         {
-           company: "Ejemplo",
-           link: "https://ejemplo.co",
-           badges: ["Remoto"],
-           title: "Senior Full Stack Developer",
-           logo: ParabolLogo,
-           start: "2021",
-           end: "2024",
-           description:
-             "Implemented new features, led squad, worked on improving the way developers ship the code, started migration from Emotion to Tailwind CSS and more. Technologies: React, TypeScript, GraphQL",
-         },
-      ],
-  
-*/

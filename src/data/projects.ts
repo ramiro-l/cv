@@ -157,13 +157,13 @@ const PROJECTS: ProjectEntry[] = [
 ];
 
 
-const getProjects = (locale: string): ProjectDetail[] => {
-    if (!checkSupportedLanguage(locale)) {
-        throw new Error(`Unsupported locale: ${locale}`);
+const getProjects = (lang: string): ProjectDetail[] => {
+    if (!checkSupportedLanguage(lang)) {
+        throw new Error(`Unsupported language: ${lang}`);
     }
     return PROJECTS.map((edu) => {
         const { default: metadata, ...data } = edu;
-        return { ...data[locale], ...metadata };
+        return { ...data[lang], ...metadata };
     });
 };
 

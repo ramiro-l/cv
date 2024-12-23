@@ -11,7 +11,7 @@ const lato = Lato({
   subsets: ["latin"],
 });
 
-export default async function LocaleLayout({
+export default async function LangLayout({
   children,
   params: { lang = "en" },
 }: Readonly<{

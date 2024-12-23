@@ -24,14 +24,14 @@ const TITLES: { [key in string]: { [key in SupportedLanguage]: string } } = {
 };
 
 
-const getTitle = (key: string, locale: string): string => {
-    if (!checkSupportedLanguage(locale)) {
-        throw new Error(`Unsupported locale: ${locale}`);
+const getTitle = (key: string, lang: string): string => {
+    if (!checkSupportedLanguage(lang)) {
+        throw new Error(`Unsupported language: ${lang}`);
     }
     if (!TITLES[key]) {
         throw new Error(`No title found for key: ${key}`);
     }
-    return TITLES[key][locale];
+    return TITLES[key][lang];
 };
 
 export default getTitle;

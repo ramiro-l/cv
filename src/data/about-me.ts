@@ -12,14 +12,14 @@ const ABOUT_ME: { [key in string]: { [key in SupportedLanguage]: string } } = {
 };
 
 
-const getAboutMe = (key: string, locale: string): string => {
-    if (!checkSupportedLanguage(locale)) {
-        throw new Error(`Unsupported locale: ${locale}`);
+const getAboutMe = (key: string, lang: string): string => {
+    if (!checkSupportedLanguage(lang)) {
+        throw new Error(`Unsupported language: ${lang}`);
     }
     if (!ABOUT_ME[key]) {
         throw new Error(`No title found for key: ${key}`);
     }
-    return ABOUT_ME[key][locale];
+    return ABOUT_ME[key][lang];
 };
 
 export default getAboutMe;

@@ -24,11 +24,11 @@ const EDUCATION: { [key in SupportedLanguage]: EducationDetail }[] = [
     }
 ];
 
-const getEducation = (locale: string): EducationDetail[] => {
-    if (!checkSupportedLanguage(locale)) {
-        throw new Error(`Unsupported locale: ${locale}`);
+const getEducation = (lang: string): EducationDetail[] => {
+    if (!checkSupportedLanguage(lang)) {
+        throw new Error(`Unsupported language: ${lang}`);
     }
-    return EDUCATION.map((edu) => edu[locale]);
+    return EDUCATION.map((edu) => edu[lang]);
 };
 
 export default getEducation;
