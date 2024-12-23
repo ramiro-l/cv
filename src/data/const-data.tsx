@@ -27,7 +27,7 @@ interface ConstData {
 export const CONST_DATA: ConstData = {
   name: "Ramiro Lugo Viola",
   initials: "RL",
-  location: "Cordoba, Argentina",
+  location: "Córdoba, Argentina",
   locationLink: "https://www.google.com/maps/place/C%C3%B3rdoba",
   avatarUrl: "", // TODO: Add avatar URL
   metaDescription:
