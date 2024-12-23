@@ -21,7 +21,10 @@ const LangButton = ({
 }) => (
   <button
     onClick={() => {
-      window.location.href = `/${lang}`;
+      const url = window.location.href;
+      if (lang !== currentLang) {
+        window.location.href = url.replace(`/${currentLang}`, `/${lang}`);
+      }
     }}
     className={`min-w-7 rounded-md p-1.5 uppercase hover:bg-muted/40 hover:text-secondary-foreground ${currentLang === lang ? "!bg-muted text-secondary-foreground" : ""}`}
   >
