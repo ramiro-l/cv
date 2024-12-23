@@ -5,7 +5,7 @@ import { useTransitionRouter } from "next-view-transitions";
 
 const ToggleLang = ({ lang }: { lang: string }) => {
   return (
-    <div className="flex w-fit items-center gap-1 rounded-md border border-muted p-0.5 text-xs text-muted-foreground">
+    <div className="flex h-8 w-fit items-center gap-1 rounded-md border border-muted p-0.5 text-xs text-muted-foreground">
       {SUPPORTED_LANGUAGES.map((language) => (
         <LangButton key={language} lang={language} currentLang={lang} />
       ))}
@@ -29,7 +29,7 @@ const LangButton = ({
           router.replace(`/${lang}`);
         }
       }}
-      className={`min-w-7 rounded-md p-1.5 uppercase hover:bg-muted/40 hover:text-secondary-foreground ${currentLang === lang ? "!bg-muted text-secondary-foreground" : ""}`}
+      className={` flex min-w-7 items-center justify-center rounded-sm p-1.5 pb-1 uppercase hover:bg-muted/40 hover:text-secondary-foreground ${currentLang === lang ? "!bg-muted text-secondary-foreground" : ""}`}
     >
       {lang}
     </button>

@@ -49,7 +49,7 @@ export default function Page({
             <div className="flex gap-x-1 pt-1 font-mono text-sm opacity-75  print:hidden">
               {CONST_DATA.contact.email ? (
                 <Button
-                  className="size-7"
+                  className="size-8 border-muted"
                   variant="outline"
                   size="icon"
                   asChild
@@ -63,7 +63,7 @@ export default function Page({
               {CONST_DATA.contact.social.map((social) => (
                 <Button
                   key={social.name}
-                  className="size-7"
+                  className="size-8 border-muted"
                   variant="outline"
                   size="icon"
                   asChild
@@ -73,6 +73,7 @@ export default function Page({
                   </a>
                 </Button>
               ))}
+              <ToggleLang lang={lang} />
             </div>
             <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
               {CONST_DATA.contact.email ? (
@@ -197,7 +198,6 @@ export default function Page({
           </strong>
         </p>
         <div className="flex flex-wrap justify-center gap-3">
-          <ToggleLang lang={lang} />
           <ToggleTheme lang={lang} />
         </div>
       </footer>

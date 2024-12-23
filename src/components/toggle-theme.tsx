@@ -70,14 +70,11 @@ const ThemeButton = ({
 }) => (
   <TooltipProvider delayDuration={10}>
     <Tooltip>
-      <TooltipTrigger>
-        {" "}
-        <button
-          onClick={() => setTheme(themeName)}
-          className={`flex items-center justify-center rounded-md p-1.5 hover:bg-muted/40 hover:text-secondary-foreground ${currentTheme === themeName ? "!bg-muted text-secondary-foreground" : ""}`}
-        >
-          <Icon className="size-4" />
-        </button>
+      <TooltipTrigger
+        onClick={() => setTheme(themeName)}
+        className={`flex items-center justify-center rounded-sm p-1.5 hover:bg-muted/40 hover:text-secondary-foreground ${currentTheme === themeName ? "!bg-muted text-secondary-foreground" : ""}`}
+      >
+        <Icon className="size-4" />
       </TooltipTrigger>
       <TooltipContent
         side="top"
