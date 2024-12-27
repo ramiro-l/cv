@@ -29,12 +29,12 @@ const BadgeTool = async ({ tag, size = "normal" }: BadgeToolProps) => {
 
   const sizeClass =
     size === "small"
-      ? "text-[10px] px-1 py-0 min-w-[80px]"
-      : "px-3 md:min-w-[100px]";
+      ? "text-[10px] px-1 min-w-[80px]"
+      : "px-3 py-0.5 md:min-w-[100px]";
 
   return (
     <Badge
-      className={`flex flex-grow cursor-default items-center justify-center gap-1 dark:text-white/75 ${sizeClass}`}
+      className={`flex flex-grow cursor-default items-center justify-center gap-1 py-0 dark:text-white/75 ${sizeClass}`}
       variant="secondary"
       key={tag}
     >
@@ -43,10 +43,11 @@ const BadgeTool = async ({ tag, size = "normal" }: BadgeToolProps) => {
           src={iconSvg}
           alt={tag + " icon"}
           loading="lazy"
-          className={`${size === "small" ? "size-2.5" : "size-3"} dark:opacity-75 dark:invert`}
+          className={`${size === "small" ? "size-2.5" : "size-3"} h-full dark:opacity-75 dark:invert`}
         />
       )}
-      {tag}
+
+      <span className="font-sans ">{tag}</span>
     </Badge>
   );
 };
@@ -59,6 +60,8 @@ const mapTagToIconName = (tag: string) => {
       return "CSS3";
     case "Bash":
       return "gnubash";
+    case "SQL":
+      return "mysql";
     default:
       return tag;
   }
