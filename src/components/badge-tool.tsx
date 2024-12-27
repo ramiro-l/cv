@@ -11,20 +11,6 @@ interface BadgeToolProps {
 
 const BadgeTool = async ({ tag, size = "normal" }: BadgeToolProps) => {
   const iconUrl = `${SIMPLE_ICONS_URL}/${mapTagToIconName(tag)}/${COLOR}`;
-
-  const fetchIconSvg = async (url: string) => {
-    try {
-      const res = await fetch(url);
-      if (!res.ok) {
-        throw new Error("Icon not found");
-      }
-      const svg = await res.text();
-      return `data:image/svg+xml;base64,${btoa(svg)}`;
-    } catch {
-      return null;
-    }
-  };
-
   const iconSvg = await fetchIconSvg(iconUrl);
 
   const sizeClass =
@@ -52,6 +38,19 @@ const BadgeTool = async ({ tag, size = "normal" }: BadgeToolProps) => {
   );
 };
 
+const fetchIconSvg = async (url: string) => {
+  try {
+    const res = await fetch(url);
+    if (!res.ok) {
+      throw new Error("Icon not found");
+    }
+    const svg = await res.text();
+    return `data:image/svg+xml;base64,${btoa(svg)}`;
+  } catch {
+    return null;
+  }
+};
+
 const mapTagToIconName = (tag: string) => {
   switch (tag) {
     case "Html":
@@ -60,8 +59,6 @@ const mapTagToIconName = (tag: string) => {
       return "CSS3";
     case "Bash":
       return "gnubash";
-    case "SQL":
-      return "mysql";
     default:
       return tag;
   }
