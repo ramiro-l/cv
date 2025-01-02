@@ -1,17 +1,18 @@
-"use client";
+"use client"
 
-import { SUPPORTED_LANGUAGES } from "@/langs";
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect } from "react"
+import { useRouter } from "next/navigation"
+
+import { SUPPORTED_LANGUAGES } from "@/langs"
 
 const HomeRedirect = () => {
-  const router = useRouter();
+    const router = useRouter()
 
-  useEffect(() => {
-    router.push("/" + SUPPORTED_LANGUAGES[0]);
-  }, [router]);
+    useEffect(() => {
+        router.push("/" + SUPPORTED_LANGUAGES[0])
+    }, [router])
 
-  return null;
-};
+    return null
+}
 
-export default HomeRedirect;
+export default HomeRedirect

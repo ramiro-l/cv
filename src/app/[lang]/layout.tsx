@@ -1,13 +1,13 @@
-import { SUPPORTED_LANGUAGES } from "@/langs";
+import { SUPPORTED_LANGUAGES } from "@/langs"
 
 export function generateStaticParams() {
-  return SUPPORTED_LANGUAGES.map((lang) => ({ lang }));
+    return SUPPORTED_LANGUAGES.map((lang) => ({ lang }))
 }
 
 export default async function LangLayout({
-  children,
+    children,
 }: Readonly<{
-  children: React.ReactNode;
+    children: React.ReactNode
 }>) {
-  return <>{children}</>;
+    return <>{children}</>
 }

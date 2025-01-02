@@ -1,22 +1,24 @@
-import { checkSupportedLanguage, type SupportedLanguage } from "@/langs";
+import { checkSupportedLanguage, type SupportedLanguage } from "@/langs"
 
-export interface WorkDetail extends WorkData, WorkMetadata { }
+export interface WorkDetail extends WorkData, WorkMetadata {}
 
 interface WorkData {
-    title: string;
-    description: string;
-    start: string;
-    end: string;
+    title: string
+    description: string
+    start: string
+    end: string
 }
 
 interface WorkMetadata {
-    company: string;
-    link: string;
-    badges: string[];
-    logo: string;
+    company: string
+    link: string
+    badges: string[]
+    logo: string
 }
 
-type ProjectEntry = { [key in SupportedLanguage]: WorkData } & { default: WorkMetadata };
+type ProjectEntry = { [key in SupportedLanguage]: WorkData } & {
+    default: WorkMetadata
+}
 
 const WORKS: ProjectEntry[] = [
     /*
@@ -45,17 +47,16 @@ const WORKS: ProjectEntry[] = [
         }
     },
 */
-];
-
+]
 
 const getWorks = (lang: string): WorkDetail[] => {
     if (!checkSupportedLanguage(lang)) {
-        throw new Error(`Unsupported language: ${lang}`);
+        throw new Error(`Unsupported language: ${lang}`)
     }
     return WORKS.map((edu) => {
-        const { default: metadata, ...data } = edu;
-        return { ...data[lang], ...metadata };
-    });
-};
+        const { default: metadata, ...data } = edu
+        return { ...data[lang], ...metadata }
+    })
+}
 
-export default getWorks;
+export default getWorks

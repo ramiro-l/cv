@@ -1,37 +1,36 @@
-import { checkSupportedLanguage, type SupportedLanguage } from "@/langs";
+import { checkSupportedLanguage, type SupportedLanguage } from "@/langs"
 
 const TITLES: { [key in string]: { [key in SupportedLanguage]: string } } = {
     about: {
         es: "Sobre mí",
-        en: "About me"
+        en: "About me",
     },
     work: {
         es: "Experiencia Laboral",
-        en: "Work Experience"
+        en: "Work Experience",
     },
     education: {
         es: "Educación",
-        en: "Education"
+        en: "Education",
     },
     skills: {
         es: "Habilidades",
-        en: "Skills"
+        en: "Skills",
     },
     projects: {
         es: "Proyectos",
-        en: "Projects"
-    }
-};
-
+        en: "Projects",
+    },
+}
 
 const getTitle = (key: string, lang: string): string => {
     if (!checkSupportedLanguage(lang)) {
-        throw new Error(`Unsupported language: ${lang}`);
+        throw new Error(`Unsupported language: ${lang}`)
     }
     if (!TITLES[key]) {
-        throw new Error(`No title found for key: ${key}`);
+        throw new Error(`No title found for key: ${key}`)
     }
-    return TITLES[key][lang];
-};
+    return TITLES[key][lang]
+}
 
-export default getTitle;
+export default getTitle
