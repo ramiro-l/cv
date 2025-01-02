@@ -80,7 +80,7 @@ const ThemeButton = ({
             </TooltipTrigger>
             <TooltipContent
                 side="top"
-                className={`mb-1 py-0 ${alignTooltip === "start" && "-ml-1"} ${alignTooltip === "end" && "-mr-1"}`}
+                className={`mb-1 py-0 text-secondary-foreground/90 ${alignTooltip === "start" && "-ml-1"} ${alignTooltip === "end" && "-mr-1"}`}
                 align={alignTooltip}
             >
                 <p>{theme(themeName, lang)}</p>
