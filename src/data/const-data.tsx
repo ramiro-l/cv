@@ -60,6 +60,7 @@ export const CONST_DATA: ConstData = {
         "Next.js",
         "Node.js",
         "Git",
+        "Linux",
         "Html",
         "CSS",
         "Bash",
