@@ -30,7 +30,7 @@ const LangButton = ({
                     router.replace(`/${lang}`)
                 }
             }}
-            className={` flex min-w-7 items-center justify-center rounded-sm p-1.5 pb-1 uppercase hover:bg-muted/40 hover:text-secondary-foreground ${currentLang === lang ? "!bg-muted text-secondary-foreground" : ""}`}
+            className={` flex min-w-7 items-center justify-center rounded-sm p-1.5 pb-1 uppercase text-secondary-foreground hover:bg-muted/50 hover:font-semibold hover:text-secondary-foreground ${currentLang === lang ? "!bg-muted font-semibold" : ""}`}
         >
             {lang}
         </button>
