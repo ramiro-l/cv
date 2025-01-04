@@ -1,4 +1,4 @@
-import { checkSupportedLanguage, type SupportedLanguage } from "@/langs"
+import { LanguageData } from "@/data/get-data"
 
 export interface WorkDetail extends WorkData, WorkMetadata {}
 
@@ -16,11 +16,7 @@ interface WorkMetadata {
     logo: string
 }
 
-type ProjectEntry = { [key in SupportedLanguage]: WorkData } & {
-    default: WorkMetadata
-}
-
-const WORKS: ProjectEntry[] = [
+export const Works = new LanguageData<WorkData, WorkMetadata>([
     /*
     NOTE: This is an example entry. You can remove this and add your own data.
 
@@ -47,16 +43,4 @@ const WORKS: ProjectEntry[] = [
         }
     },
 */
-]
-
-const getWorks = (lang: string): WorkDetail[] => {
-    if (!checkSupportedLanguage(lang)) {
-        throw new Error(`Unsupported language: ${lang}`)
-    }
-    return WORKS.map((edu) => {
-        const { default: metadata, ...data } = edu
-        return { ...data[lang], ...metadata }
-    })
-}
-
-export default getWorks
+])

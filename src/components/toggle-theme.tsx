@@ -11,7 +11,7 @@ import {
     TooltipTrigger,
 } from "@/components/ui/tooltip"
 
-import theme from "@/data/themes"
+import { Themes } from "@/data/page/themes"
 
 const ToggleTheme = ({ lang }: { lang: string }) => {
     const { theme, setTheme } = useTheme()
@@ -83,7 +83,7 @@ const ThemeButton = ({
                 className={`mb-1 py-0 text-secondary-foreground/90 ${alignTooltip === "start" && "-ml-1"} ${alignTooltip === "end" && "-mr-1"}`}
                 align={alignTooltip}
             >
-                <p>{theme(themeName, lang)}</p>
+                <p>{Themes.get(themeName, lang)}</p>
             </TooltipContent>
         </Tooltip>
     </TooltipProvider>

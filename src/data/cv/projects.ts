@@ -1,4 +1,4 @@
-import { checkSupportedLanguage, type SupportedLanguage } from "@/langs"
+import { LanguageData } from "@/data/get-data"
 
 export interface ProjectDetail extends ProjectData, ProjectMetadata {}
 
@@ -21,11 +21,7 @@ interface ProjectMetadata {
     img: string
 }
 
-type ProjectEntry = { [key in SupportedLanguage]: ProjectData } & {
-    default: ProjectMetadata
-}
-
-const PROJECTS: ProjectEntry[] = [
+export const Projects = new LanguageData<ProjectData, ProjectMetadata>([
     {
         en: {
             title: "Conway's Game of Life",
@@ -169,16 +165,4 @@ const PROJECTS: ProjectEntry[] = [
             img: "https://raw.githubusercontent.com/ramiro-l/repo-downloader/refs/heads/main/app/og.png",
         },
     },
-]
-
-const getProjects = (lang: string): ProjectDetail[] => {
-    if (!checkSupportedLanguage(lang)) {
-        throw new Error(`Unsupported language: ${lang}`)
-    }
-    return PROJECTS.map((edu) => {
-        const { default: metadata, ...data } = edu
-        return { ...data[lang], ...metadata }
-    })
-}
-
-export default getProjects
+])

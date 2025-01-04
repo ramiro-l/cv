@@ -5,26 +5,7 @@ import { GitHubIcon, LinkedInIcon } from "@/components/icons"
  *  Constants data for the website.
  *  This data not change between languages.
  */
-
-interface ConstData {
-    name: string
-    initials: string
-    location: string
-    locationLink: string
-    avatarUrl: string
-    metaDescription: string
-    contact: {
-        email: string
-        social: {
-            name: string
-            url: string
-            icon: React.ComponentType<React.SVGProps<SVGSVGElement>>
-        }[]
-    }
-    skills: string[]
-}
-
-export const CONST_DATA: ConstData = {
+export const CONST_DATA = {
     name: "Ramiro Lugo Viola",
     initials: "RL",
     location: "Córdoba, Argentina",

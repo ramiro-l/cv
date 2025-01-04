@@ -9,7 +9,7 @@ import {
 
 import BadgeTool from "@/components/badge-tool"
 
-import { type ProjectDetail } from "@/data/projects"
+import { type ProjectDetail } from "@/data/cv/projects"
 
 export default function ProjectCard({
     title,

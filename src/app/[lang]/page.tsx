@@ -13,11 +13,11 @@ import ProjectCard from "@/components/project-card"
 import ToggleLang from "@/components/toggle-lang"
 import ToggleTheme from "@/components/toggle-theme"
 
-import { CONST_DATA } from "@/data/const-data"
-import aboutMe from "@/data/about-me"
-import education from "@/data/education"
-import projects from "@/data/projects"
-import title from "@/data/titles"
+import { CONST_DATA } from "@/data/cv/const"
+import { Education } from "@/data/cv/education"
+import { Introduction } from "@/data/cv/introduction"
+import { Projects } from "@/data/cv/projects"
+import { Titles } from "@/data/page/titles"
 
 // import works from "@/data/work";
 
@@ -38,7 +38,7 @@ export default function Page({
                             {CONST_DATA.name}
                         </h1>
                         <p className="max-w-lg text-balance font-mono text-sm text-muted-foreground">
-                            {aboutMe("profile", lang)}
+                            {Introduction.get("profile", lang)}
                         </p>
                         <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
                             <a
@@ -105,15 +105,15 @@ export default function Page({
 
                 <Section>
                     <h2 className="text-xl font-bold">
-                        {title("about", lang)}
+                        {Titles.get("about", lang)}
                     </h2>
                     <p className="font-mono text-sm text-muted-foreground">
-                        {aboutMe("summary", lang)}
+                        {Introduction.get("summary", lang)}
                     </p>
                 </Section>
 
                 {/* <Section>
-          <h2 className="text-xl font-bold">{title("work", lang)}</h2>
+          <h2 className="text-xl font-bold">{Titles.get("work", lang)}</h2>
           {works(lang).map((work) => {
             return (
               <Card key={work.company}>
@@ -155,9 +155,9 @@ export default function Page({
 
                 <Section>
                     <h2 className="text-xl font-bold">
-                        {title("education", lang)}
+                        {Titles.get("education", lang)}
                     </h2>
-                    {education(lang).map(
+                    {Education.get(lang).map(
                         (education: {
                             school: string
                             start: string
@@ -191,7 +191,7 @@ export default function Page({
 
                 <Section>
                     <h2 className="text-xl font-bold">
-                        {title("skills", lang)}
+                        {Titles.get("skills", lang)}
                     </h2>
                     <div className="flex flex-wrap gap-1" translate="no">
                         {CONST_DATA.skills.map((skill) => {
@@ -202,10 +202,10 @@ export default function Page({
 
                 <Section className="print-force-new-page scroll-mb-16">
                     <h2 className="text-xl font-bold">
-                        {title("projects", lang)}
+                        {Titles.get("projects", lang)}
                     </h2>
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-3 print:grid-cols-2 print:gap-2">
-                        {projects(lang)
+                        {Projects.get(lang)
                             .slice()
                             .reverse()
                             .map((project) => {
