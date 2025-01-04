@@ -16,11 +16,11 @@ const BadgeTool = async ({ tag, size = "normal" }: BadgeToolProps) => {
     const sizeClass =
         size === "small"
             ? "text-[10px] px-1 min-w-[80px]"
-            : "px-3 py-0.5 md:min-w-[100px]"
+            : "px-3 py-0.5 md:min-w-[100px] print:min-w-[90px]"
 
     return (
         <Badge
-            className={`flex grow cursor-default items-center justify-center gap-1 py-0 dark:text-white/75 ${sizeClass}`}
+            className={`flex grow cursor-default items-center justify-center gap-1 py-0 dark:text-white/75 print:border print:border-muted ${sizeClass}`}
             variant="secondary"
             key={tag}
         >

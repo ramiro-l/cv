@@ -15,7 +15,7 @@ export default function Header({
     return (
         <div className="flex justify-between">
             <PersonalDetails lang={lang} />
-            <Avatar className="ml-1 mt-1 size-28 max-[380px]:hidden">
+            <Avatar className="ml-1 mt-1 size-28 max-[380px]:hidden print:border print:border-muted">
                 <AvatarImage
                     alt={USER_DETAILS.name}
                     src={USER_DETAILS.avatarUrl}
