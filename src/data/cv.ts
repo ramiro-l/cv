@@ -42,13 +42,6 @@ export const Introduction = new LanguageSpecificData({
     },
 })
 
-interface EducationData {
-    school: string
-    degree: string
-    start: string
-    end: string
-}
-
 export const Education = new LanguageData<EducationData>([
     {
         en: {
@@ -65,19 +58,6 @@ export const Education = new LanguageData<EducationData>([
         },
     },
 ])
-
-interface WorkData {
-    title: string
-    start: string
-    end: string
-    description: string
-}
-interface WorkDefaultData {
-    company: string
-    logo: string
-    link: string
-    badges: string[]
-}
 
 export const Works = new LanguageData<WorkData, WorkDefaultData>([
     /*
@@ -126,21 +106,6 @@ export const Skills = [
     "CSS",
     "Bash",
 ]
-
-interface ProjectData {
-    title: string
-    type: string
-    description: string
-}
-
-interface ProjectDefaultData {
-    techStack: string[]
-    link: {
-        label: string
-        href: string
-    }
-    img: string
-}
 
 export const Projects = new LanguageData<ProjectData, ProjectDefaultData>([
     {
