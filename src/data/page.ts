@@ -1,4 +1,4 @@
-import { LanguageSpecificData } from "@/data/get-data"
+import { LanguageSpecificData } from "@/lib/language-data"
 
 export const Titles = new LanguageSpecificData<string>({
     about: {
@@ -20,5 +20,20 @@ export const Titles = new LanguageSpecificData<string>({
     projects: {
         en: "Projects",
         es: "Proyectos",
+    },
+})
+
+export const Themes = new LanguageSpecificData<string>({
+    system: {
+        en: "System",
+        es: "Sistema",
+    },
+    light: {
+        en: "Light",
+        es: "Claro",
+    },
+    dark: {
+        en: "Dark",
+        es: "Oscuro",
     },
 })

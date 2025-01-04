@@ -11,7 +11,7 @@ import {
     TooltipTrigger,
 } from "@/components/ui/tooltip"
 
-import { Themes } from "@/data/page/themes"
+import { Themes } from "@/data/page"
 
 const ToggleTheme = ({ lang }: { lang: string }) => {
     const { theme, setTheme } = useTheme()

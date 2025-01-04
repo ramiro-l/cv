@@ -6,33 +6,33 @@ Construida con Next.js y shadcn/ui inspirado en [cv](https://github.com/BartoszJ
 
 ## Características
 
-- La configuración solo toma unos minutos [archivo de configuración único](./src/data/resume-data.tsx)
-- Construido usando Next.js 14, React, Typescript, Shadcn/ui, TailwindCss
-- Layout generado automáticamente
-- Responsivo para diferentes dispositivos
-- Optimizado para Next.js y Vercel
+-   La configuración solo toma unos minutos [archivo de configuración único](./src/data/resume-data.tsx)
+-   Construido usando Next.js 14, React, Typescript, Shadcn/ui, TailwindCss
+-   Layout generado automáticamente
+-   Responsivo para diferentes dispositivos
+-   Optimizado para Next.js y Vercel
 
 ## Instalación
 
 1. Clona el repositorio:
-   ```bash
-   git clone https://github.com/ramiro-l/cv
-   ```
+    ```bash
+    git clone https://github.com/ramiro-l/cv
+    ```
 2. Navega al directorio del proyecto:
-   ```bash
-   cd cv
-   ```
+    ```bash
+    cd cv
+    ```
 3. Instala las dependencias:
-   ```bash
-   npm install
-   ```
+    ```bash
+    npm install
+    ```
 
 ## Uso
 
 1. Inicia el servidor de desarrollo:
-   ```bash
-   npm run dev
-   ```
+    ```bash
+    npm run dev
+    ```
 2. Abre tu navegador y navega a `http://localhost:3000` para ver tu CV en línea.
 
 ## Personalización

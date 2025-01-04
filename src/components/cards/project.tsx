@@ -9,8 +9,6 @@ import {
 
 import BadgeTool from "@/components/badge-tool"
 
-import { type ProjectDetail } from "@/data/cv/projects"
-
 export default function ProjectCard({
     title,
     description,
@@ -18,7 +16,14 @@ export default function ProjectCard({
     link,
     img,
     type,
-}: Readonly<ProjectDetail>) {
+}: Readonly<{
+    title: string
+    description: string
+    techStack: string[]
+    link?: { href: string }
+    img: string
+    type: string
+}>) {
     return (
         <Card className="flex flex-col overflow-hidden border border-muted">
             <CardHeader className="">

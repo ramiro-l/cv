@@ -7,11 +7,20 @@ import { SupportedLanguage } from "@/langs"
 
 import "@/app/globals.css"
 
+import { Metadata } from "next"
+
+import { META_TAGS } from "@/data/cv"
+
 const lato = Lato({
     weight: ["400", "700"],
     style: "normal",
     subsets: ["latin"],
 })
+
+export const metadata: Metadata = {
+    title: META_TAGS.title,
+    description: META_TAGS.metaDescription,
+}
 
 export default async function LangLayout({
     children,
