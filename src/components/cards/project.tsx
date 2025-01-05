@@ -36,7 +36,7 @@ export default function ProjectCard({
                         src={img}
                         alt={title}
                         loading="lazy"
-                        className="h-32 w-full object-cover transition-transform duration-500 ease-in-out hover:scale-105"
+                        className="h-32 w-full object-cover transition-transform duration-500 ease-in-out hover:scale-105 print:h-28"
                     />
                 </a>
 
@@ -83,7 +83,20 @@ export default function ProjectCard({
                         <BadgeTool key={tag} tag={tag} size="small" />
                     ))}
                 </div>
+                {link && link.href && (
+                    <a
+                        className="hidden !cursor-pointer print:block"
+                        href={link.href}
+                        target="_blank"
+                    >
+                        <BadgeTool tag={parseUrl(link.href)} size="small" />
+                    </a>
+                )}
             </CardContent>
         </Card>
     )
+}
+
+const parseUrl = (url: string) => {
+    return url.replace(/\/$/, "").replace("https://", "").replace("www.", "")
 }
