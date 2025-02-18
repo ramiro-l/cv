@@ -110,6 +110,34 @@ export const Skills = [
 export const Projects = new LanguageData<ProjectData, ProjectDefaultData>([
     {
         en: {
+            title: "Holidays Argentina",
+            type: "Personal Project",
+            description:
+                "Minimalist calendar with information about holidays in Argentina and related data. With a focus on design and usability.",
+        },
+        es: {
+            title: "Feriados Argentina",
+            type: "Proyecto Personal",
+            description:
+                "Calendario minimalista con información de los feriados en Argentina y datos relacionados. Enfocándome en el diseño y la usabilidad.",
+        },
+        default: {
+            techStack: [
+                "API",
+                "Next.js",
+                "TailwindCSS",
+                "ShadcnUI",
+                "TypeScript",
+            ],
+            link: {
+                label: "feriados.eldato.ar",
+                href: "https://feriados.eldato.ar/",
+            },
+            img: "https://i.ibb.co/DDhdWHy0/opengraph-image.png",
+        },
+    },
+    {
+        en: {
             title: "Repo Downloader",
             type: "Side Project",
             description:
