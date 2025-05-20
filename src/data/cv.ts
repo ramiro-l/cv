@@ -161,7 +161,7 @@ export const Projects = new LanguageData<ProjectData, ProjectDefaultData>([
                 label: "repo-downloader.pages.dev",
                 href: "https://repo-downloader.pages.dev/",
             },
-            img: "https://raw.githubusercontent.com/ramiro-l/repo-downloader/refs/heads/main/app/og.png",
+            img: "https://i.ibb.co/RGpTZ9r8/repo-downloader-og.png",
         },
     },
     {
