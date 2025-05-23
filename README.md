@@ -6,11 +6,9 @@ Construida con Next.js y shadcn/ui inspirado en [cv](https://github.com/BartoszJ
 
 ## Características
 
--   La configuración solo toma unos minutos [archivo de configuración único](./src/data/resume-data.tsx)
 -   Construido usando Next.js 14, React, Typescript, Shadcn/ui, TailwindCss
 -   Layout generado automáticamente
 -   Responsivo para diferentes dispositivos
--   Optimizado para Next.js y Vercel
 
 ## Instalación
 
@@ -34,10 +32,6 @@ Construida con Next.js y shadcn/ui inspirado en [cv](https://github.com/BartoszJ
     npm run dev
     ```
 2. Abre tu navegador y navega a `http://localhost:3000` para ver tu CV en línea.
-
-## Personalización
-
-Para personalizar tu CV, edita el archivo de configuración ubicado en `./src/data/resume-data.tsx`.
 
 ## Contribuciones
 
