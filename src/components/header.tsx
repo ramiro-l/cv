@@ -29,13 +29,13 @@ export default function Header({
 function PersonalDetails({ lang }: Readonly<{ lang: SupportedLanguage }>) {
     return (
         <div className="flex-1 space-y-1.5">
-            <h1 className=" text-2xl font-bold" translate="no">
+            <h1 className="text-2xl font-bold" translate="no">
                 {USER_DETAILS.name}
             </h1>
-            <p className="max-w-lg text-balance font-mono text-sm text-muted-foreground">
+            <p className="max-w-lg text-balance text-muted-foreground">
                 {Introduction.get("profile", lang)}
             </p>
-            <p className="max-w-md items-center text-pretty font-mono text-xs text-muted-foreground">
+            <p className="max-w-md items-center text-pretty text-xs text-muted-foreground">
                 <a
                     className="inline-flex gap-x-1.5 align-baseline leading-none hover:underline"
                     href={USER_DETAILS.locationLink}
@@ -45,7 +45,7 @@ function PersonalDetails({ lang }: Readonly<{ lang: SupportedLanguage }>) {
                     <strong className="mt-0.5">{USER_DETAILS.location}</strong>
                 </a>
             </p>
-            <div className="flex gap-x-1 pt-1 font-mono text-sm opacity-75  print:hidden">
+            <div className="flex gap-x-1 pt-1  text-sm opacity-75  print:hidden">
                 {USER_DETAILS.contact.email ? (
                     <Button
                         className="size-8 border-muted"
@@ -74,7 +74,7 @@ function PersonalDetails({ lang }: Readonly<{ lang: SupportedLanguage }>) {
                 ))}
                 <ToggleLang lang={lang} />
             </div>
-            <div className="hidden flex-col gap-x-1 font-mono text-sm text-muted-foreground print:flex">
+            <div className="hidden flex-col gap-x-1 text-sm text-muted-foreground print:flex">
                 {USER_DETAILS.contact.email ? (
                     <a href={`mailto:${USER_DETAILS.contact.email}`}>
                         <span className="underline">

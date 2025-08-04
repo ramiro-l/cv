@@ -11,7 +11,7 @@ import { Metadata } from "next"
 
 import { META_TAGS } from "@/data/cv"
 
-const lato = Lato({
+const font = Lato({
     weight: ["400", "700"],
     style: "normal",
     subsets: ["latin"],
@@ -33,7 +33,7 @@ export default async function LangLayout({
         <ViewTransitions>
             <html
                 lang={lang}
-                className={lato.className}
+                className={font.className}
                 suppressHydrationWarning
             >
                 <body>

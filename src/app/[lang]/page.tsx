@@ -23,7 +23,7 @@ export default function Page({
                     title={Titles.get("about", lang)}
                     show={Introduction.containsData("summary")}
                 >
-                    <p className="font-mono text-sm text-muted-foreground">
+                    <p className="text-muted-foreground">
                         {Introduction.get("summary", lang)}
                     </p>
                 </ContentSection>

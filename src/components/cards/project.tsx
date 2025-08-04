@@ -58,7 +58,7 @@ export default function ProjectCard({
                     </CardTitle>
 
                     {link && (
-                        <div className="hidden font-mono text-xs underline print:visible">
+                        <div className="hidden underline print:visible">
                             {link.href
                                 .replace("https://", "")
                                 .replace("www.", "")
@@ -66,7 +66,7 @@ export default function ProjectCard({
                         </div>
                     )}
 
-                    <CardDescription className="font-mono text-xs">
+                    <CardDescription>
                         {description}
                     </CardDescription>
                 </div>

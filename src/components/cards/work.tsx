@@ -40,7 +40,7 @@ export default function WorkCard({
                     </div>
                 </div>
 
-                <h4 className="font-mono text-sm leading-none">{work.title}</h4>
+                <h4 className="leading-none">{work.title}</h4>
             </CardHeader>
             <CardContent className="mt-2 text-sm">
                 {work.description}
