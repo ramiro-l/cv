@@ -9,6 +9,8 @@ import "@/app/globals.css"
 
 import { Metadata } from "next"
 
+import EditMode from "@/components/edit-mode"
+
 import { META_TAGS } from "@/data/cv"
 
 const lato = Lato({
@@ -42,6 +44,8 @@ export default async function LangLayout({
                         themes={["light", "dark"]}
                         enableSystem
                     >
+                        <EditMode />
+
                         {children}
                     </ThemeProvider>
                 </body>
