@@ -60,32 +60,26 @@ export const Education = new LanguageData<EducationData>([
 ])
 
 export const Works = new LanguageData<WorkData, WorkDefaultData>([
-    /*
-    NOTE: This is an example entry. You can remove this and add your own data.
-
     {
         en: {
-            title: "Senior Full Stack Developer",
-            start: "2021",
-            end: "2024",
-            description:
-                "Implemented new features, led squad, worked on improving the way developers ship the code, started migration from Emotion to Tailwind CSS and more. Technologies: React, TypeScript, GraphQL",
+            title: "Software Developer",
+            start: "2025",
+            end: "PRESENT",
+            description: "",
         },
         es: {
-            title: "Desarrollador Full Stack Senior",
-            start: "2021",
-            end: "2024",
-            description:
-                "Implementé nuevas características, lideré un equipo, trabajé en mejorar la forma en que los desarrolladores envían el código, comencé la migración de Emotion a Tailwind CSS y más. Tecnologías: React, TypeScript, GraphQL",
+            title: "Desarrollador de Software",
+            start: "2025",
+            end: "ACTUALIDAD",
+            description: "",
         },
         default: {
-            company: "Ejemplo",
-            logo: "https://example.com/logo.png",
-            link: "https://ejemplo.co",
-            badges: ["Remoto"],
+            company: "Web3D.app",
+            logo: "https://i.ibb.co/1YmdBJhV/web3d-logo.jpg",
+            link: "https://web3d.app",
+            badges: [],
         }
     },
-*/
 ])
 
 export const Skills = [
@@ -108,6 +102,32 @@ export const Skills = [
 ]
 
 export const Projects = new LanguageData<ProjectData, ProjectDefaultData>([
+    {
+        en: {
+            title: "S-Sigma Web Interpreter",
+            type: "Personal Project",
+            description:
+                "Interpreter for an academic formal language, used in the study of computability. Implementing parsing and dynamic evaluation.",
+        },
+        es: {
+            title: "Intérprete Web S-Sigma",
+            type: "Proyecto Personal",
+            description:
+                "Intérprete para un lenguaje formal académico, utilizado en el estudio de la computabilidad. Implementando análisis sintáctico y evaluación dinámica.",
+        },
+        default: {
+            techStack: [
+                "Vite",
+                "TypeScript",
+                "Monaco Editor",
+            ],
+            link: {
+                label: "S-Sigma Interpreter",
+                href: "https://ramiro-l.github.io/S-Sigma-Interprete-Web/",
+            },
+            img: "https://i.ibb.co/v6bsBp16/SSIGMA.png",
+        },
+    },
     {
         en: {
             title: "Holidays Argentina",
