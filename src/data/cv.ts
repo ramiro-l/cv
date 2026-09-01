@@ -75,7 +75,7 @@ export const Works = new LanguageData<WorkData, WorkDefaultData>([
         },
         default: {
             company: "Web3D.app",
-            logo: "https://i.ibb.co/1YmdBJhV/web3d-logo.jpg",
+            logo: "/cv/images/web3d-logo.svg",
             link: "https://web3d.app",
             badges: [],
         }
@@ -125,7 +125,7 @@ export const Projects = new LanguageData<ProjectData, ProjectDefaultData>([
                 label: "S-Sigma Interpreter",
                 href: "https://ramiro-l.github.io/S-Sigma-Interprete-Web/",
             },
-            img: "https://i.ibb.co/v6bsBp16/SSIGMA.png",
+            img: "/cv/images/ssigma.webp",
         },
     },
     {
@@ -153,7 +153,7 @@ export const Projects = new LanguageData<ProjectData, ProjectDefaultData>([
                 label: "feriados.eldato.ar",
                 href: "https://feriados.eldato.ar/",
             },
-            img: "https://i.ibb.co/DDhdWHy0/opengraph-image.png",
+            img: "/cv/images/opengraph-image.webp",
         },
     },
     {
@@ -181,7 +181,7 @@ export const Projects = new LanguageData<ProjectData, ProjectDefaultData>([
                 label: "repo-downloader.pages.dev",
                 href: "https://repo-downloader.pages.dev/",
             },
-            img: "https://i.ibb.co/RGpTZ9r8/repo-downloader-og.png",
+            img: "/cv/images/repo-downloader-og.webp",
         },
     },
     {
@@ -211,7 +211,7 @@ export const Projects = new LanguageData<ProjectData, ProjectDefaultData>([
                 label: "GitHub",
                 href: "https://github.com/orgs/DeMarc-Team/repositories",
             },
-            img: "https://i.ibb.co/VBvCwPQ/El-Switcher.png",
+            img: "/cv/images/el-switcher.webp",
         },
     },
     {
@@ -232,7 +232,7 @@ export const Projects = new LanguageData<ProjectData, ProjectDefaultData>([
                 label: "examenes-viejos.pages.dev",
                 href: "https://examenes-viejos.pages.dev/",
             },
-            img: "https://i.ibb.co/kKv1B9z/Banner-Examenes-Viejos.png",
+            img: "/cv/images/banner-examenes-viejos.webp",
         },
     },
     {
@@ -254,7 +254,7 @@ export const Projects = new LanguageData<ProjectData, ProjectDefaultData>([
                 label: "eldato.com.ar",
                 href: "https://eldato.ar/",
             },
-            img: "https://i.ibb.co/crvFQp3/El-Dato.png",
+            img: "/cv/images/el-dato.webp",
         },
     },
     {
@@ -274,7 +274,7 @@ export const Projects = new LanguageData<ProjectData, ProjectDefaultData>([
                 label: "truquito-app.pages.dev",
                 href: "https://truquito-app.pages.dev/",
             },
-            img: "https://i.ibb.co/mCGrz6R/Truquito.png",
+            img: "/cv/images/truquito.webp",
         },
     },
     {
@@ -296,7 +296,7 @@ export const Projects = new LanguageData<ProjectData, ProjectDefaultData>([
                 label: "GitHub",
                 href: "https://github.com/ramiro-l/Game-Of-Life-Conway-Rust",
             },
-            img: "https://i.ibb.co/Zz10Dwz/game-of-life.gif",
+            img: "/cv/images/game-of-life.webp",
         },
     },
 ])

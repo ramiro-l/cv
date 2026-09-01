@@ -1,4 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image"
+
 import {
     Card,
     CardContent,
@@ -30,13 +31,14 @@ export default function ProjectCard({
                 <a
                     href={link?.href}
                     target="_blank"
-                    className="overflow-hidden"
+                    className="relative block h-32 w-full overflow-hidden print:h-28"
                 >
-                    <img
+                    <Image
                         src={img}
                         alt={title}
-                        loading="lazy"
-                        className="h-32 w-full object-cover transition-transform duration-500 ease-in-out hover:scale-105 print:h-28"
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-cover transition-transform duration-500 ease-in-out hover:scale-105"
                     />
                 </a>
 

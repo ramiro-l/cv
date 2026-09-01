@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
 
@@ -18,13 +20,13 @@ export default function WorkCard({
     return (
         <Card className="bg-transparent">
             <CardHeader>
-                <div className="flex gap-x-4">
-                    <img
+                <div className="flex items-center gap-x-4">
+                    <Image
                         src={work.logo}
                         alt={work.company + " logo"}
                         width={48}
                         height={48}
-                        className="rounded-sm "
+                        className="rounded-sm"
                     />
                     <div className="w-full">
                         <div className="flex items-center justify-between gap-x-2 text-base">
