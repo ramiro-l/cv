@@ -83,22 +83,24 @@ export const Works = new LanguageData<WorkData, WorkDefaultData>([
 ])
 
 export const Skills = [
-    "C",
+    "TypeScript",
+    "JavaScript",
+    "React",
+    "Next.js",
+    "Node.js",
+    "TailwindCSS",
+    "HTML",
+    "CSS",
+    "Git",
     "Rust",
     "Python",
     "SQL",
     "MongoDB",
-    "JavaScript",
-    "TypeScript",
-    "Haskell",
-    "React",
-    "Next.js",
-    "Node.js",
-    "Git",
     "Linux",
-    "Html",
-    "CSS",
     "Bash",
+    "C",
+    "Ocaml",
+    "Haskell",
 ]
 
 export const Projects = new LanguageData<ProjectData, ProjectDefaultData>([
