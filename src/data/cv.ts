@@ -5,8 +5,8 @@ import { GitHubIcon, LinkedInIcon } from "@/components/icons"
 export const USER_DETAILS = {
     name: "Ramiro Lugo Viola",
     initials: "RL",
-    location: "Córdoba, Argentina",
-    locationLink: "https://www.google.com/maps/place/C%C3%B3rdoba",
+    location: "Argentina",
+    locationLink: "https://www.google.com/maps/place/Argentina",
     avatarUrl: "", // TODO: Add avatar URL
     contact: {
         email: "ramirolugov@gmail.com",
@@ -28,13 +28,13 @@ export const USER_DETAILS = {
 export const META_TAGS = {
     title: `${USER_DETAILS.name} | CV`,
     metaDescription:
-        "Developer and student of Computer Science. This is my personal website where I share my projects and experiences.",
+        "Developer and advanced student of Computer Science. This is my personal website where I share my projects and experiences.",
 }
 
 export const Introduction = new LanguageSpecificData({
     profile: {
-        en: "Developer and student of the Bachelor of Computer Science.",
-        es: "Desarrollador y estudiante de Licenciatura en Ciencias de la Computación.",
+        en: "Developer and advanced student of the Bachelor of Computer Science.",
+        es: "Desarrollador y estudiante avanzado de Licenciatura en Ciencias de la Computación.",
     },
     summary: {
         en: "I enjoy software development, I'm always learning new technologies and methodologies. I value clean, efficient and scalable code.",
