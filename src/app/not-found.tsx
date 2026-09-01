@@ -1,16 +1,10 @@
 "use client"
 
-import { Metadata } from "next"
 import { useTransitionRouter } from "next-view-transitions"
 
 import { SUPPORTED_LANGUAGES } from "@/langs"
 
 import { Button } from "@/components/ui/button"
-
-export const metadata: Metadata = {
-    title: "Page Not Found | CV",
-    description: "The page you are looking for does not exist.",
-}
 
 export default function NotFound() {
     const router = useTransitionRouter()

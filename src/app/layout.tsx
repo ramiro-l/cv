@@ -3,8 +3,6 @@ import { Lato } from "next/font/google"
 import { ThemeProvider } from "next-themes"
 import { ViewTransitions } from "next-view-transitions"
 
-import { SupportedLanguage } from "@/langs"
-
 import "@/app/globals.css"
 
 import { Metadata } from "next"
@@ -22,17 +20,15 @@ export const metadata: Metadata = {
     description: META_TAGS.metaDescription,
 }
 
-export default async function LangLayout({
+export default function LangLayout({
     children,
-    params: { lang = "en" },
 }: Readonly<{
     children: React.ReactNode
-    params: { lang: SupportedLanguage }
 }>) {
     return (
         <ViewTransitions>
             <html
-                lang={lang}
+                lang="en"
                 className={font.className}
                 suppressHydrationWarning
             >

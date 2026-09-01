@@ -11,9 +11,11 @@ import Header from "@/components/header"
 import { Education, Introduction, Projects, Skills, Works } from "@/data/cv"
 import { Titles } from "@/data/page"
 
-export default function Page({
-    params: { lang },
-}: Readonly<{ params: { lang: SupportedLanguage } }>) {
+export default async function Page({
+    params
+}: Readonly<{ params: Promise<{ lang: SupportedLanguage }> }>) {
+    const { lang } = await params;
+
     return (
         <main className="container relative mx-auto scroll-my-12 overflow-auto p-4 md:px-16 md:pt-16 print:p-12">
             <section className="mx-auto w-full max-w-2xl space-y-8  print:space-y-6">
