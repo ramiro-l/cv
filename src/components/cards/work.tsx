@@ -15,6 +15,7 @@ export default function WorkCard({
                     <a
                         href={work.link}
                         target="_blank"
+                        rel="noopener noreferrer"
                         className="overflow-hidden rounded-sm"
                     >
 
@@ -29,7 +30,7 @@ export default function WorkCard({
                     <div className="w-full">
                         <div className="flex items-center justify-between gap-x-2 text-base">
                             <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">
-                                <a className="hover:underline" href={work.link} target="_blank">
+                                <a className="hover:underline" href={work.link} target="_blank" rel="noopener noreferrer">
                                     {work.company}
                                 </a>
 
