@@ -1,5 +1,8 @@
 interface EducationData {
-    school: string
+    school: {
+        name: string,
+        tags: string[]
+    }
     degree: string
     start: string
     end: string

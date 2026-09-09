@@ -43,14 +43,12 @@ export default async function Page({
                     title={Titles.get("education", lang)}
                     show={Education.containsData()}
                 >
-                    {Education.get(lang).map((education) => {
-                        return (
-                            <EducationCard
-                                key={education.school}
-                                education={education}
-                            />
-                        )
-                    })}
+                    {Education.get(lang).map((education) => (
+                        <EducationCard
+                            key={education.school.name}
+                            education={education}
+                        />
+                    ))}
                 </ContentSection>
 
                 <ContentSection
@@ -72,7 +70,7 @@ export default async function Page({
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-3 print:grid-cols-2 print:gap-2">
                         {Projects.get(lang).map((project) => {
                             return (
-                                <ProjectCard key={project.title} {...project} />
+                                <ProjectCard key={project.title} project={project} />
                             )
                         })}
                     </div>

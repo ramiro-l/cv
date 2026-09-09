@@ -6,28 +6,26 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card"
 export default function WorkCard({
     work,
 }: Readonly<{
-    work: {
-        company: string
-        link: string
-        logo: string
-        badges: string[]
-        start: string
-        end: string
-        title: string
-        description: string
-    }
+    work: WorkData & WorkDefaultData
 }>) {
     return (
         <Card className="bg-transparent">
             <CardHeader>
                 <div className="flex items-center gap-x-4">
-                    <Image
-                        src={work.logo}
-                        alt={work.company + " logo"}
-                        width={48}
-                        height={48}
-                        className="rounded-sm"
-                    />
+                    <a
+                        href={work.link}
+                        target="_blank"
+                        className="overflow-hidden rounded-sm"
+                    >
+
+                        <Image
+                            src={work.logo}
+                            alt={work.company + " logo"}
+                            width={48}
+                            height={48}
+                            className="transition-transform duration-500 ease-in-out hover:scale-105"
+                        />
+                    </a>
                     <div className="w-full">
                         <div className="flex items-center justify-between gap-x-2 text-base">
                             <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none">

@@ -11,31 +11,19 @@ import {
 import BadgeTool from "@/components/badge-tool"
 
 export default function ProjectCard({
-    title,
-    description,
-    techStack,
-    link,
-    img,
-    type,
-}: Readonly<{
-    title: string
-    description: string
-    techStack: string[]
-    link?: { href: string }
-    img: string
-    type: string
-}>) {
+    project
+}: Readonly<{ project: ProjectData & ProjectDefaultData }>) {
     return (
         <Card className="flex flex-col overflow-hidden border border-muted">
             <CardHeader className="">
                 <a
-                    href={link?.href}
+                    href={project.link?.href}
                     target="_blank"
                     className="relative block h-32 w-full overflow-hidden print:h-28"
                 >
                     <Image
-                        src={img}
-                        alt={title}
+                        src={project.img}
+                        alt={project.title}
                         fill
                         sizes="(max-width: 768px) 100vw, 50vw"
                         className="object-cover transition-transform duration-500 ease-in-out hover:scale-105"
@@ -44,24 +32,24 @@ export default function ProjectCard({
 
                 <div className="space-y-1 px-3 pt-2">
                     <CardTitle className="text-base">
-                        {link ? (
+                        {project.link ? (
                             <a
-                                href={link?.href}
+                                href={project.link?.href}
                                 target="_blank"
                                 className="inline-flex items-center gap-1.5 hover:underline"
                                 translate="no"
                             >
-                                {title}{" "}
+                                {project.title}{" "}
                                 <span className="size-1 rounded-full bg-green-500"></span>
                             </a>
                         ) : (
-                            title
+                            project.title
                         )}
                     </CardTitle>
 
-                    {link && (
+                    {project.link && (
                         <div className="hidden underline print:visible">
-                            {link.href
+                            {project.link.href
                                 .replace("https://", "")
                                 .replace("www.", "")
                                 .replace("/", "")}
@@ -69,29 +57,29 @@ export default function ProjectCard({
                     )}
 
                     <CardDescription>
-                        {description}
+                        {project.description}
                     </CardDescription>
                 </div>
             </CardHeader>
             <CardContent className="mt-2 flex h-full flex-col justify-center gap-1 px-3 pb-3">
                 <div>
-                    <BadgeTool tag={type} size="small" />
+                    <BadgeTool tag={project.type} size="small" />
                 </div>
                 <div
                     className=" flex w-full flex-wrap justify-between gap-1"
                     translate="no"
                 >
-                    {techStack.map((tag) => (
+                    {project.techStack.map((tag) => (
                         <BadgeTool key={tag} tag={tag} size="small" />
                     ))}
                 </div>
-                {link && link.href && (
+                {project.link && project.link.href && (
                     <a
                         className="hidden !cursor-pointer print:block"
-                        href={link.href}
+                        href={project.link.href}
                         target="_blank"
                     >
-                        <BadgeTool tag={parseUrl(link.href)} size="small" />
+                        <BadgeTool tag={parseUrl(project.link.href)} size="small" />
                     </a>
                 )}
             </CardContent>
