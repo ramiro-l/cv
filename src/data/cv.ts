@@ -33,8 +33,8 @@ export const META_TAGS = {
 
 export const Introduction = new LanguageSpecificData({
     profile: {
-        en: "Developer and advanced student of the Bachelor of Computer Science.",
-        es: "Desarrollador y estudiante avanzado de Licenciatura en Ciencias de la Computación.",
+        en: "Software developer and advanced Computer Science student.",
+        es: "Desarrollador de software y estudiante avanzado de Licenciatura en Ciencias de la Computación.",
     },
     summary: {
         en: "I enjoy software development, I'm always learning new technologies and methodologies. I value clean, efficient and scalable code.",
@@ -45,13 +45,19 @@ export const Introduction = new LanguageSpecificData({
 export const Education = new LanguageData<EducationData>([
     {
         en: {
-            school: "National University of Cordoba (FaMAF)",
-            degree: "Bachelor of Computer Science.",
+            school: {
+                name: "National University of Cordoba",
+                tags: ["FAMAF"]
+            },
+            degree: "B.S. & M.S. equivalent in Computer Science (3-year Bachelor's + 2-year Master's with Thesis)",
             start: "2022",
             end: "PRESENT",
         },
         es: {
-            school: "Universidad Nacional de Cordoba (FaMAF)",
+            school: {
+                name: "Universidad Nacional de Cordoba",
+                tags: ["FAMAF"]
+            },
             degree: "Licenciatura en Ciencias de la Computación.",
             start: "2022",
             end: "ACTUALIDAD",
@@ -89,6 +95,7 @@ export const Skills = [
     "Next.js",
     "Node.js",
     "TailwindCSS",
+    "Code Agents",
     "HTML",
     "CSS",
     "Git",
